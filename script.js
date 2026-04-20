@@ -157,10 +157,16 @@ cookieReject.addEventListener('click', () => dismissCookie('essential'));
 /* ============================================================
    PRELOADER
    ============================================================ */
-window.addEventListener('load', () => {
+const hidePreloader = () => {
   const preloader = document.getElementById('preloader');
-  if (preloader) setTimeout(() => preloader.classList.add('hide'), 700);
-});
+  if (preloader && !preloader.classList.contains('hide')) {
+    preloader.classList.add('hide');
+  }
+};
+// Sakrij preloader čim je DOM spreman, ne čekaj video/slike
+document.addEventListener('DOMContentLoaded', () => setTimeout(hidePreloader, 700));
+// Sigurnosni fallback — makni preloader nakon max 3s bez obzira na resurse
+setTimeout(hidePreloader, 3000);
 
 /* ============================================================
    CUSTOM CURSOR  (samo pointer uređaji — miš)
