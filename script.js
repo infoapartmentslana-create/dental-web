@@ -291,30 +291,3 @@ const staggerObs = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.stagger').forEach(el => staggerObs.observe(el));
 
-/* ============================================================
-   THEME SWITCHER
-   ============================================================ */
-(function initThemeSwitcher() {
-  const root    = document.documentElement;
-  const buttons = document.querySelectorAll('.theme-btn[data-theme]');
-
-  /* Označi aktivni gumb prema trenutnoj temi */
-  function syncButtons(id) {
-    buttons.forEach(b => b.classList.toggle('active', b.dataset.theme === id));
-  }
-
-  /* Primijeni temu */
-  function applyTheme(id) {
-    root.setAttribute('data-theme', id);
-    localStorage.setItem('dentalis-theme', id);
-    syncButtons(id);
-  }
-
-  /* Init — postavi aktivni gumb */
-  syncButtons(root.getAttribute('data-theme') || '1');
-
-  /* Klik na gumb */
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => applyTheme(btn.dataset.theme));
-  });
-})();

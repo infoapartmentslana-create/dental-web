@@ -3,7 +3,8 @@
     "allow": [
       "Bash(mkdir -p \"c:/KRISTINA WEB STRANICA STOMATOLOGIJA/assets\")",
       "Bash(cp \"c:/KRISTINA WEB STRANICA STOMATOLOGIJA/src/assets/\"*.jpg \"c:/KRISTINA WEB STRANICA STOMATOLOGIJA/assets/\")",
-      "Bash(cp \"c:/KRISTINA WEB STRANICA STOMATOLOGIJA/public/favicon.ico\" \"c:/KRISTINA WEB STRANICA STOMATOLOGIJA/assets/\")"
+      "Bash(cp \"c:/KRISTINA WEB STRANICA STOMATOLOGIJA/public/favicon.ico\" \"c:/KRISTINA WEB STRANICA STOMATOLOGIJA/assets/\")",
+      "Bash(git add *)"
     ]
   }
 }

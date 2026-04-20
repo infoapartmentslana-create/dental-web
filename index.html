@@ -49,13 +49,6 @@
 
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Postavi temu odmah (bez flash efekta pri učitavanju) -->
-  <script>
-    document.documentElement.setAttribute(
-      'data-theme',
-      localStorage.getItem('dentalis-theme') || '1'
-    );
-  </script>
 </head>
 <body>
 
@@ -85,19 +78,6 @@
       <a href="#kontakt">Kontakt</a>
     </nav>
 
-    <!-- ▼ PRIVREMENO za odabir teme — makni kad doktor odabere ▼ -->
-    <div class="theme-switcher" title="Odaberi temu za prikaz doktoru">
-      <span class="theme-switcher-label">Tema</span>
-      <div class="theme-btns">
-        <button class="theme-btn theme-btn--1" data-theme="1" title="Tema 1 — Zlatna krem"></button>
-        <button class="theme-btn theme-btn--2" data-theme="2" title="Tema 2 — Hladna plava"></button>
-        <button class="theme-btn theme-btn--3" data-theme="3" title="Tema 3 — Šumska zelena"></button>
-        <button class="theme-btn theme-btn--4" data-theme="4" title="Tema 4 — Cognac"></button>
-        <button class="theme-btn theme-btn--5" data-theme="5" title="Tema 5 — Champagne rosé"></button>
-        <button class="theme-btn theme-btn--6" data-theme="6" title="Tema 6 — Black Pearl"></button>
-      </div>
-    </div>
-    <!-- ▲ PRIVREMENO ▲ -->
 
     <a href="#kontakt" class="nav-cta">Naruči se</a>
 
