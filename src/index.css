@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Premium & Editorial design system — krem/bež + zlatni akcenti */
+
+@layer base {
+  :root {
+    --background: 36 30% 96%;        /* warm cream */
+    --foreground: 25 20% 14%;        /* deep espresso */
+
+    --card: 36 35% 98%;
+    --card-foreground: 25 20% 14%;
+
+    --popover: 36 35% 98%;
+    --popover-foreground: 25 20% 14%;
+
+    --primary: 35 45% 48%;           /* refined gold */
+    --primary-foreground: 36 35% 98%;
+    --primary-glow: 40 65% 65%;      /* lighter champagne */
+
+    --secondary: 32 22% 88%;         /* soft beige */
+    --secondary-foreground: 25 20% 14%;
+
+    --muted: 34 20% 92%;
+    --muted-foreground: 25 12% 38%;
+
+    --accent: 35 45% 48%;
+    --accent-foreground: 36 35% 98%;
+
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 36 35% 98%;
+
+    --border: 30 18% 85%;
+    --input: 30 18% 85%;
+    --ring: 35 45% 48%;
+
+    --radius: 0.25rem;
+
+    /* Premium tokens */
+    --gold: 35 45% 48%;
+    --gold-light: 40 65% 65%;
+    --gold-dark: 32 50% 35%;
+    --cream: 36 30% 96%;
+    --cream-deep: 32 22% 88%;
+    --espresso: 25 20% 14%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(25 20% 14% / 0.55), hsl(25 20% 14% / 0.25));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--gold-dark)), hsl(var(--gold)), hsl(var(--gold-light)));
+    --gradient-cream: linear-gradient(180deg, hsl(var(--cream)), hsl(var(--cream-deep)));
+
+    --shadow-elegant: 0 25px 60px -20px hsl(25 20% 14% / 0.18);
+    --shadow-soft: 0 8px 30px -8px hsl(25 20% 14% / 0.10);
+    --shadow-gold: 0 10px 40px -10px hsl(var(--gold) / 0.35);
+
+    --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer components {
+  .container-luxe {
+    @apply max-w-6xl mx-auto px-6 md:px-10;
+  }
+  .eyebrow {
+    @apply uppercase tracking-[0.3em] text-xs text-primary font-medium;
+  }
+  .gold-line {
+    @apply inline-block w-12 h-px bg-primary align-middle;
+  }
+  .hover-lift {
+    transition: transform 0.6s var(--transition-smooth), box-shadow 0.6s var(--transition-smooth);
+  }
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-elegant);
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .animate-fade-up {
+    animation: fade-up 0.9s var(--transition-smooth) both;
+  }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
