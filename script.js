@@ -168,46 +168,6 @@ document.addEventListener('DOMContentLoaded', () => setTimeout(hidePreloader, 70
 // Sigurnosni fallback — makni preloader nakon max 3s bez obzira na resurse
 setTimeout(hidePreloader, 3000);
 
-/* ============================================================
-   CUSTOM CURSOR  (samo pointer uređaji — miš)
-   ============================================================ */
-(function initCursor() {
-  if (!window.matchMedia('(pointer: fine)').matches) return;
-
-  const dot  = document.getElementById('cursor-dot');
-  const ring = document.getElementById('cursor-ring');
-  if (!dot || !ring) return;
-
-  let mx = 0, my = 0, rx = 0, ry = 0;
-
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    dot.style.left = mx + 'px';
-    dot.style.top  = my + 'px';
-  });
-
-  /* Ring prati s laggom za premium feel */
-  (function loop() {
-    rx += (mx - rx) * 0.11;
-    ry += (my - ry) * 0.11;
-    ring.style.left = rx + 'px';
-    ring.style.top  = ry + 'px';
-    requestAnimationFrame(loop);
-  })();
-
-  document.addEventListener('mouseleave', () => document.body.classList.add('cursor-hidden'));
-  document.addEventListener('mouseenter', () => document.body.classList.remove('cursor-hidden'));
-
-  /* Hover efekt — proširi ring na linkovima i gumbima */
-  document.body.addEventListener('mouseover', e => {
-    if (e.target.closest('a, button, .gallery-item, .service-card, [role="button"]'))
-      document.body.classList.add('cursor-hover');
-  });
-  document.body.addEventListener('mouseout', e => {
-    if (e.target.closest('a, button, .gallery-item, .service-card, [role="button"]'))
-      document.body.classList.remove('cursor-hover');
-  });
-})();
 
 /* ============================================================
    ANIMIRANI BROJAČI

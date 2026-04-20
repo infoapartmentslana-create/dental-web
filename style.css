@@ -898,41 +898,6 @@ footer { background: var(--espresso); color: hsl(36 30% 96% / 0.65); padding-top
   to   { width: 7rem; }
 }
 
-/* ============================================================
-   CUSTOM CURSOR  (samo na uređajima s mišem)
-   ============================================================ */
-@media (pointer: fine) {
-  body, a, button, .gallery-item, .service-card, [role="button"] { cursor: none !important; }
-
-  #cursor-dot {
-    position: fixed;
-    top: 0; left: 0;
-    width: 6px; height: 6px;
-    background: var(--gold);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: width 0.3s var(--ease-smooth), height 0.3s var(--ease-smooth), background 0.3s;
-    will-change: left, top;
-  }
-  #cursor-ring {
-    position: fixed;
-    top: 0; left: 0;
-    width: 36px; height: 36px;
-    border: 1px solid hsl(35 45% 48% / 0.55);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9998;
-    transform: translate(-50%, -50%);
-    transition: width 0.4s var(--ease-smooth), height 0.4s var(--ease-smooth), border-color 0.3s, opacity 0.3s;
-    will-change: left, top;
-  }
-  body.cursor-hover #cursor-dot  { width: 10px; height: 10px; background: var(--gold-light); }
-  body.cursor-hover #cursor-ring { width: 60px; height: 60px; border-color: var(--gold); }
-  body.cursor-hidden #cursor-dot,
-  body.cursor-hidden #cursor-ring { opacity: 0; }
-}
 
 /* ============================================================
    MARQUEE TICKER STRIP
