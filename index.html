@@ -196,11 +196,36 @@
   <div class="container">
     <div class="about-grid reveal">
 
-      <!-- UPUTA: Zamijeni assets/doctor.jpg s fotografijom doktorice/doktora -->
       <div class="about-img-wrap">
-        <img src="assets/doctor.jpg"
-             alt="Doktorica Dentalis ordinacije"
-             loading="lazy" />
+        <!--
+          ╔══════════════════════════════════════════════════╗
+          ║  UPUTA: Dodavanje fotografije doktorice/doktora  ║
+          ║  1. Stavi svoju fotografiju u assets/doctor.jpg  ║
+          ║  2. Ukloni cijeli <div class="photo-placeholder"> ║
+          ║  3. Uncommentaj <img> tag ispod                  ║
+          ╚══════════════════════════════════════════════════╝
+        -->
+
+        <!-- <img src="assets/doctor.jpg" alt="Dr. Ime Prezime" loading="lazy" /> -->
+
+        <div class="photo-placeholder" aria-hidden="true">
+          <!-- Silueta osobe -->
+          <svg class="placeholder-silhouette" viewBox="0 0 120 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="60" cy="52" r="28" fill="currentColor" opacity="0.18"/>
+            <path d="M4 156 C4 112 116 112 116 156" fill="currentColor" opacity="0.12"/>
+            <circle cx="60" cy="52" r="28" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+            <path d="M6 154 C6 114 114 114 114 154" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+          </svg>
+
+          <p class="placeholder-title">Vaša fotografija</p>
+          <span class="placeholder-note">Zamijenite s pravom fotografijom</span>
+
+          <!-- Kutni okviri za premium look -->
+          <span class="ph-corner ph-tl"></span>
+          <span class="ph-corner ph-tr"></span>
+          <span class="ph-corner ph-bl"></span>
+          <span class="ph-corner ph-br"></span>
+        </div>
       </div>
 
       <div class="about-text">

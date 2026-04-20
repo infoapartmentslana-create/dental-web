@@ -1377,3 +1377,79 @@ footer           { background: var(--espresso); }   /* tamna — ostaje */
 /* Switcher — malo širi kad ima 6 točkica */
 .theme-btns { gap: 0.32rem; }
 .theme-btn  { width: 13px; height: 13px; }
+
+/* ============================================================
+   PHOTO PLACEHOLDER — o nama sekcija
+   ============================================================ */
+.photo-placeholder {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/5;
+  background: var(--cream-b);
+  border: 1.5px dashed hsl(35 45% 48% / 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  box-shadow: var(--shadow-elegant);
+  overflow: hidden;
+}
+
+/* Suptilni dijagonalni pattern u pozadini */
+.photo-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 18px,
+    hsl(35 45% 48% / 0.04) 18px,
+    hsl(35 45% 48% / 0.04) 19px
+  );
+  pointer-events: none;
+}
+
+.placeholder-silhouette {
+  width: 7rem;
+  height: auto;
+  color: var(--gold);
+  position: relative;
+  z-index: 1;
+}
+
+.placeholder-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--gold);
+  text-align: center;
+  letter-spacing: 0.02em;
+  position: relative;
+  z-index: 1;
+  line-height: 1.3;
+}
+
+.placeholder-note {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--muted-fg);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Kutni okviri — pečat/frame efekt */
+.ph-corner {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-color: var(--gold);
+  border-style: solid;
+  opacity: 0.55;
+}
+.ph-tl { top: 1.1rem;    left: 1.1rem;   border-width: 1.5px 0 0 1.5px; }
+.ph-tr { top: 1.1rem;    right: 1.1rem;  border-width: 1.5px 1.5px 0 0; }
+.ph-bl { bottom: 1.1rem; left: 1.1rem;   border-width: 0 0 1.5px 1.5px; }
+.ph-br { bottom: 1.1rem; right: 1.1rem;  border-width: 0 1.5px 1.5px 0; }
