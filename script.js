@@ -163,10 +163,8 @@ const hidePreloader = () => {
     preloader.classList.add('hide');
   }
 };
-// Sakrij preloader čim je DOM spreman, ne čekaj video/slike
-document.addEventListener('DOMContentLoaded', () => setTimeout(hidePreloader, 700));
-// Sigurnosni fallback — makni preloader nakon max 3s bez obzira na resurse
-setTimeout(hidePreloader, 3000);
+document.addEventListener('DOMContentLoaded', () => setTimeout(hidePreloader, 1800));
+setTimeout(hidePreloader, 4000);
 
 
 /* ============================================================

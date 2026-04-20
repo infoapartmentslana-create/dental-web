@@ -3,17 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dentalis — Premium stomatološka ordinacija</title>
+  <title>Zahnaesthetika — Zahnordination</title>
   <meta name="description" content="Vrhunska stomatološka skrb u atmosferi mira i povjerenja. Implantologija, estetska stomatologija, ortodoncija i još mnogo toga." />
-  <meta name="author" content="Dentalis" />
+  <meta name="author" content="Zahnaesthetika" />
 
   <!-- Open Graph -->
-  <meta property="og:title"       content="Dentalis — Premium stomatološka ordinacija" />
+  <meta property="og:title"       content="Zahnaesthetika — Zahnordination" />
   <meta property="og:description" content="Vrhunska stomatološka skrb u atmosferi mira i povjerenja." />
   <meta property="og:type"        content="website" />
 
-  <!-- Favicon — zamijeni s pravim logom ako imaš -->
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="icon" type="image/png" href="images/logo/logo-image.png" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,10 +27,10 @@
   {
     "@context": "https://schema.org",
     "@type": "Dentist",
-    "name": "Dentalis",
+    "name": "Zahnaesthetika",
     "description": "Vrhunska stomatološka skrb u atmosferi mira i povjerenja.",
     "telephone": "+38512345678",
-    "email": "info@dentalis.hr",
+    "email": "info@zahnaesthetika.hr",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Ilica 1",
@@ -59,16 +58,19 @@
      PRELOADER
      ============================================================ -->
 <div id="preloader">
-  <div class="preloader-logo"><span>D</span>entalis</div>
-  <div class="preloader-line"></div>
-  <div class="preloader-sub">Stomatološka ordinacija</div>
+  <img src="images/tmp/logo.jpeg" alt="Zahnaesthetika" class="preloader-splash" />
+  <div class="preloader-bar-wrap">
+    <div class="preloader-bar"></div>
+  </div>
 </div>
 
 <header id="navbar">
   <div class="container navbar-inner">
 
-    <!-- UPUTA: Zamijeni "Dentalis" s imenom ordinacije, ili stavi <img> s logotipom -->
-    <a href="#hero" class="logo"><span>D</span>entalis</a>
+    <a href="#hero" class="logo">
+      <img src="images/logo/svg2.svg" alt="" class="logo-svg" aria-hidden="true" />
+      <span class="logo-text"><span class="logo-initial">Z</span>ahnaesthetika</span>
+    </a>
 
     <nav class="nav-links" aria-label="Glavna navigacija">
       <a href="#o-nama">O nama</a>
@@ -125,8 +127,8 @@
   <div class="hero-content">
     <div class="hero-glass">
       <!-- UPUTA: Prilagodi sve tekstove u hero sekciji -->
-      <p class="eyebrow">Stomatološka ordinacija</p>
-      <h1>Dobrodošli u<br /><em>Dentalis</em></h1>
+      <p class="eyebrow">Zahnordination</p>
+      <h1>Dobrodošli u<br /><em>Zahnaesthetika</em></h1>
       <p>
         Vrhunska stomatološka skrb u atmosferi mira i povjerenja.<br />
         Vaš osmijeh — naša najveća umjetnost.
@@ -217,7 +219,7 @@
           3–5 rečenica koje pacijentima daju osjećaj povjerenja i topline.
         -->
         <p>
-          Ordinacija Dentalis osnovana je s jednim ciljem — pružiti pacijentima
+          Zahnaesthetika je osnovana s jednim ciljem — pružiti pacijentima
           stomatološku skrb kakvu zaslužuju: stručnu, brižnu i bez boli.
           Naš tim iskusnih stomatologa koristi najmoderniju opremu i materijale
           europske kvalitete.
@@ -225,7 +227,7 @@
         <p>
           Naš pristup spaja vrhunsku tehnologiju s individualnom skrbi.
           Svaki pacijent zaslužuje vrijeme, pažnju i tretman izrađen baš za njega.
-          U Dentalis ordinaciji, vaš osmijeh je naša misija.
+          U Zahnaesthetika ordinaciji, vaš osmijeh je naša misija.
         </p>
 
         <!-- UPUTA: Prilagodi statističke brojeve (data-target = broj do kojeg broji) -->
@@ -707,7 +709,7 @@
         4. Kopiraj src atribut iz iframe koda i zamijeni donji src
       -->
       <iframe
-        title="Lokacija ordinacije Dentalis"
+        title="Lokacija ordinacije Zahnaesthetika"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2782.748973!2d15.9742!3d45.8131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d701b1ea8839%3A0x3a45249628fbc28a!2sIlica%201%2C%2010000%2C%20Zagreb!5e0!3m2!1shr!2shr!4v1700000000000"
         allowfullscreen
         loading="lazy"
@@ -726,8 +728,10 @@
     <div class="footer-grid">
 
       <div class="footer-brand">
-        <!-- UPUTA: Zamijeni naziv / stavi logo sliku -->
-        <a href="#hero" class="logo"><span>D</span>entalis</a>
+        <a href="#hero" class="logo logo--light">
+          <img src="images/logo/svg2.svg" alt="" class="logo-svg" aria-hidden="true" />
+          <span class="logo-text"><span class="logo-initial">Z</span>ahnaesthetika</span>
+        </a>
         <p>Vrhunska stomatološka skrb u atmosferi mira i povjerenja. Vaš osmijeh — naša najveća umjetnost.</p>
         <div class="social-links">
           <!-- UPUTA: Zamijeni # s pravim linkovima -->
@@ -773,8 +777,8 @@
 
     <div class="footer-bottom">
       <!-- UPUTA: Zamijeni OIB i puni naziv firme s pravim podacima -->
-      <div>© <span id="year"></span> Dentalis d.o.o. — Sva prava pridržana.</div>
-      <div>OIB: 00000000000 · Ilica 1, 10000 Zagreb</div>
+      <div>© <span id="year"></span> Zahnaesthetika — Sva prava pridržana.</div>
+      <div>Ilica 1, 10000 Zagreb</div>
     </div>
   </div>
 </footer>

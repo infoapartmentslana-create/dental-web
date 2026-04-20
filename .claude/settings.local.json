@@ -4,7 +4,12 @@
       "Bash(mkdir -p \"c:/KRISTINA WEB STRANICA STOMATOLOGIJA/assets\")",
       "Bash(cp \"c:/KRISTINA WEB STRANICA STOMATOLOGIJA/src/assets/\"*.jpg \"c:/KRISTINA WEB STRANICA STOMATOLOGIJA/assets/\")",
       "Bash(cp \"c:/KRISTINA WEB STRANICA STOMATOLOGIJA/public/favicon.ico\" \"c:/KRISTINA WEB STRANICA STOMATOLOGIJA/assets/\")",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(python3 -c \"from PIL import Image; print\\('PIL ok'\\)\")",
+      "Bash(python -c \"from PIL import Image; print\\('PIL ok'\\)\")",
+      "Bash(magick --version)",
+      "Bash(convert --version)",
+      "Bash(node -e \"require\\('sharp'\\); console.log\\('sharp ok'\\)\")"
     ]
   }
 }
