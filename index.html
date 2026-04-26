@@ -1,42 +1,34 @@
 <!DOCTYPE html>
-<html lang="hr">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zahnaesthetika — Zahnordination</title>
-  <meta name="description" content="Vrhunska stomatološka skrb u atmosferi mira i povjerenja. Implantologija, estetska stomatologija, ortodoncija i još mnogo toga." />
-  <meta name="author" content="Zahnaesthetika" />
+  <title>Zahnaesthetika</title>
+  <meta name="description" content="Ihre moderne Zahnarztpraxis in Salzburg, wo Zahnmedizin auf Kunst trifft. Implantologie, ästhetische Zahnmedizin, Parodontologie und mehr." />
+  <meta name="author" content="Zahnordination Zahnaesthetika" />
 
-  <!-- Open Graph -->
-  <meta property="og:title"       content="Zahnaesthetika — Zahnordination" />
-  <meta property="og:description" content="Vrhunska stomatološka skrb u atmosferi mira i povjerenja." />
+  <meta property="og:title"       content="Zahnaesthetika — Zahnordination Salzburg" />
+  <meta property="og:description" content="Ihre moderne Zahnarztpraxis in Salzburg, wo Zahnmedizin auf Kunst trifft." />
   <meta property="og:type"        content="website" />
 
-  <link rel="icon" type="image/png" href="images/logo/logo-image.png" />
+  <link rel="icon" type="image/png" href="images/logo/logo-image-bg-none.png" />
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <!--
-    JSON-LD — Lokalni biznis (Google koristi ovo za pretraživanje)
-    UPUTA: Zamijeni sve podatke s pravim podacima ordinacije
-  -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Dentist",
-    "name": "Zahnaesthetika",
-    "description": "Vrhunska stomatološka skrb u atmosferi mira i povjerenja.",
-    "telephone": "+38512345678",
-    "email": "info@zahnaesthetika.hr",
+    "name": "Zahnordination Zahnaesthetika",
+    "description": "Ihre moderne Zahnarztpraxis in Salzburg, wo Zahnmedizin auf Kunst trifft.",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Ilica 1",
-      "addressLocality": "Zagreb",
-      "postalCode": "10000",
-      "addressCountry": "HR"
+      "streetAddress": "Nonntaler Hauptstraße 49",
+      "addressLocality": "Salzburg",
+      "postalCode": "5020",
+      "addressCountry": "AT"
     },
     "openingHoursSpecification": [
       {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"08:00","closes":"20:00"},
@@ -47,23 +39,65 @@
   </script>
 
   <link rel="stylesheet" href="style.css" />
-
 </head>
 <body>
 
-<!-- ============================================================
-     NAVBAR
-     ============================================================ -->
-<!-- ============================================================
-     PRELOADER
-     ============================================================ -->
+<!-- PRELOADER -->
 <div id="preloader">
-  <img src="images/tmp/logo.jpeg" alt="Zahnaesthetika" class="preloader-splash" />
-  <div class="preloader-bar-wrap">
-    <div class="preloader-bar"></div>
+
+  <!-- Rozé pozadina -->
+  <div class="pl-bg"></div>
+
+  <!-- Kutni okviri — luxury frame -->
+  <div class="pl-corner pl-corner--tl">
+    <svg viewBox="0 0 48 48" fill="none"><path d="M2 46 L2 2 L46 2" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg>
   </div>
+  <div class="pl-corner pl-corner--tr">
+    <svg viewBox="0 0 48 48" fill="none"><path d="M46 46 L46 2 L2 2" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg>
+  </div>
+  <div class="pl-corner pl-corner--bl">
+    <svg viewBox="0 0 48 48" fill="none"><path d="M2 2 L2 46 L46 46" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg>
+  </div>
+  <div class="pl-corner pl-corner--br">
+    <svg viewBox="0 0 48 48" fill="none"><path d="M46 2 L46 46 L2 46" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg>
+  </div>
+
+  <!-- Dekorativni horizontalni ornamenti -->
+  <div class="pl-orn pl-orn--top">
+    <span class="pl-orn-line"></span>
+    <svg viewBox="0 0 10 10" fill="currentColor" class="pl-orn-gem"><polygon points="5,0 10,5 5,10 0,5"/></svg>
+    <span class="pl-orn-line"></span>
+  </div>
+  <div class="pl-orn pl-orn--bottom">
+    <span class="pl-orn-line"></span>
+    <svg viewBox="0 0 10 10" fill="currentColor" class="pl-orn-gem"><polygon points="5,0 10,5 5,10 0,5"/></svg>
+    <span class="pl-orn-line"></span>
+  </div>
+
+  <!-- Središnji sadržaj -->
+  <div class="pl-inner">
+
+    <!-- Logo mark: stvarni logo ordinacije -->
+    <div class="pl-logo-mark">
+      <img class="pl-tooth" src="images/logo/logo-image-bg-none.png" alt="Zahnaesthetika logo" />
+    </div>
+
+    <!-- Naziv ordinacije -->
+    <h1 class="pl-brand">Zahnaesthetika</h1>
+
+    <!-- Podnaslov -->
+    <p class="pl-subtitle">Z A H N O R D I N A T I O N</p>
+
+  </div>
+
+  <!-- Traka napretka -->
+  <div class="pl-bar-wrap">
+    <div class="pl-bar"></div>
+  </div>
+
 </div>
 
+<!-- NAVBAR -->
 <header id="navbar">
   <div class="container navbar-inner">
 
@@ -72,137 +106,98 @@
       <span class="logo-text"><span class="logo-initial">Z</span>ahnaesthetika</span>
     </a>
 
-    <nav class="nav-links" aria-label="Glavna navigacija">
-      <a href="#o-nama">O nama</a>
-      <a href="#usluge">Usluge</a>
-      <a href="#galerija">Galerija</a>
-      <a href="#recenzije">Recenzije</a>
+    <nav class="nav-links" aria-label="Hauptnavigation">
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#galerie">Galerie</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
 
+    <a href="#kontakt" class="nav-cta">Termin buchen</a>
 
-    <a href="#kontakt" class="nav-cta">Naruči se</a>
-
-    <button class="hamburger" id="hamburger" aria-label="Otvori izbornik" aria-expanded="false">
+    <button class="hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 
-  <!-- Mobilni izbornik -->
   <div class="mobile-menu" id="mobile-menu">
     <div class="container">
       <nav>
-        <a href="#o-nama">O nama</a>
-        <a href="#usluge">Usluge</a>
-        <a href="#galerija">Galerija</a>
-        <a href="#recenzije">Recenzije</a>
+        <a href="#ueber-uns">Über uns</a>
+        <a href="#leistungen">Leistungen</a>
+        <a href="#galerie">Galerie</a>
         <a href="#kontakt">Kontakt</a>
-        <a href="#kontakt" style="color:var(--gold);font-weight:500">→ Naruči se</a>
+        <a href="#kontakt" style="color:var(--gold);font-weight:500">&#8594; Termin buchen</a>
       </nav>
     </div>
   </div>
 </header>
 
 
-<!-- ============================================================
-     HERO — Video pozadina
-     ============================================================ -->
+<!-- HERO -->
 <section id="hero">
-  <!--
-    ╔══════════════════════════════════════════════════╗
-    ║  UPUTA: VIDEO                                    ║
-    ║  Stavi video datoteku na putanju: assets/hero.mp4║
-    ║  Preporučeno: 1920×1080px, H.264, max 15 MB     ║
-    ║  Dok nema videa, prikazuje se poster slika.      ║
-    ╚══════════════════════════════════════════════════╝
-  -->
   <video autoplay muted loop playsinline poster="assets/hero-poster.jpg">
     <source src="assets/hero.mp4" type="video/mp4" />
   </video>
-
-  <!-- Tamni gradient overlay preko videa -->
   <div class="hero-overlay" aria-hidden="true"></div>
-
-  <!-- Tekst sa bluriranom pozadinom (glassmorphism) -->
   <div class="hero-content">
     <div class="hero-glass">
-      <!-- UPUTA: Prilagodi sve tekstove u hero sekciji -->
-      <p class="eyebrow">Zahnordination</p>
-      <h1>Dobrodošli u<br /><em>Zahnaesthetika</em></h1>
+      <p class="eyebrow">Zahnordination · Salzburg</p>
+      <h1>Ästhetik trifft<br /><em>Präzision</em></h1>
       <p>
-        Vrhunska stomatološka skrb u atmosferi mira i povjerenja.<br />
-        Vaš osmijeh — naša najveća umjetnost.
+        Ihre moderne Zahnarztpraxis in Salzburg, wo Zahnmedizin auf Kunst trifft.<br />
+        Unser Ziel: Ihr Lächeln in besten Händen.
       </p>
       <div class="hero-btns">
-        <a href="#kontakt" class="btn-primary">Zakaži pregled</a>
-        <a href="#usluge"  class="btn-outline">Naše usluge</a>
+        <a href="#kontakt" class="btn-primary">Termin buchen</a>
+        <a href="#leistungen" class="btn-outline">Unsere Leistungen</a>
       </div>
     </div>
   </div>
-
-  <!-- Scroll indikator (animirana linija prema dolje) -->
   <div class="scroll-indicator" aria-hidden="true"></div>
 </section>
 
 
-<!-- ============================================================
-     MARQUEE TICKER STRIP
-     ============================================================ -->
+<!-- MARQUEE -->
 <div class="marquee-strip" aria-hidden="true">
   <div class="marquee-track">
-    <!-- Duplikat za seamless loop -->
-    <div class="marquee-item"><span class="marquee-dot"></span> <em>Estetska stomatologija</em></div>
-    <div class="marquee-item"><span class="marquee-dot"></span> Implantologija</div>
-    <div class="marquee-item"><span class="marquee-dot"></span> <em>Ortodoncija</em></div>
-    <div class="marquee-item"><span class="marquee-dot"></span> Protetika</div>
-    <div class="marquee-item"><span class="marquee-dot"></span> <em>Parodontologija</em></div>
-    <div class="marquee-item"><span class="marquee-dot"></span> Dječja stomatologija</div>
-    <div class="marquee-item"><span class="marquee-dot"></span> <em>Profesionalna higijena</em></div>
-    <div class="marquee-item"><span class="marquee-dot"></span> Konzervativna stomatologija</div>
-    <!-- Duplikat -->
-    <div class="marquee-item"><span class="marquee-dot"></span> <em>Estetska stomatologija</em></div>
-    <div class="marquee-item"><span class="marquee-dot"></span> Implantologija</div>
-    <div class="marquee-item"><span class="marquee-dot"></span> <em>Ortodoncija</em></div>
-    <div class="marquee-item"><span class="marquee-dot"></span> Protetika</div>
-    <div class="marquee-item"><span class="marquee-dot"></span> <em>Parodontologija</em></div>
-    <div class="marquee-item"><span class="marquee-dot"></span> Dječja stomatologija</div>
-    <div class="marquee-item"><span class="marquee-dot"></span> <em>Profesionalna higijena</em></div>
-    <div class="marquee-item"><span class="marquee-dot"></span> Konzervativna stomatologija</div>
+    <div class="marquee-item"><span class="marquee-dot"></span> <em>Ästhetische Zahnmedizin</em></div>
+    <div class="marquee-item"><span class="marquee-dot"></span> Implantologie</div>
+    <div class="marquee-item"><span class="marquee-dot"></span> <em>Parodontologie</em></div>
+    <div class="marquee-item"><span class="marquee-dot"></span> Zahnersatz</div>
+    <div class="marquee-item"><span class="marquee-dot"></span> <em>Wurzelkanalbehandlung</em></div>
+    <div class="marquee-item"><span class="marquee-dot"></span> Radiologische Diagnostik</div>
+    <div class="marquee-item"><span class="marquee-dot"></span> <em>Professionelle Zahnreinigung</em></div>
+    <div class="marquee-item"><span class="marquee-dot"></span> Konservierende Zahnmedizin</div>
+    <div class="marquee-item"><span class="marquee-dot"></span> <em>Ästhetische Zahnmedizin</em></div>
+    <div class="marquee-item"><span class="marquee-dot"></span> Implantologie</div>
+    <div class="marquee-item"><span class="marquee-dot"></span> <em>Parodontologie</em></div>
+    <div class="marquee-item"><span class="marquee-dot"></span> Zahnersatz</div>
+    <div class="marquee-item"><span class="marquee-dot"></span> <em>Wurzelkanalbehandlung</em></div>
+    <div class="marquee-item"><span class="marquee-dot"></span> Radiologische Diagnostik</div>
+    <div class="marquee-item"><span class="marquee-dot"></span> <em>Professionelle Zahnreinigung</em></div>
+    <div class="marquee-item"><span class="marquee-dot"></span> Konservierende Zahnmedizin</div>
   </div>
 </div>
 
-<!-- ============================================================
-     O NAMA
-     ============================================================ -->
-<section id="o-nama">
+
+<!-- ÜBER UNS -->
+<section id="ueber-uns">
   <div class="container">
     <div class="about-grid reveal">
 
       <div class="about-img-wrap">
-        <!--
-          ╔══════════════════════════════════════════════════╗
-          ║  UPUTA: Dodavanje fotografije doktorice/doktora  ║
-          ║  1. Stavi svoju fotografiju u assets/doctor.jpg  ║
-          ║  2. Ukloni cijeli <div class="photo-placeholder"> ║
-          ║  3. Uncommentaj <img> tag ispod                  ║
-          ╚══════════════════════════════════════════════════╝
-        -->
-
-        <!-- <img src="assets/doctor.jpg" alt="Dr. Ime Prezime" loading="lazy" /> -->
-
+        <!-- Wenn Sie ein Foto haben, ersetzen Sie den Platzhalter durch:
+             <img src="assets/doctor.jpg" alt="Zahnärztin der Praxis" loading="lazy" /> -->
         <div class="photo-placeholder" aria-hidden="true">
-          <!-- Silueta osobe -->
           <svg class="placeholder-silhouette" viewBox="0 0 120 160" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="60" cy="52" r="28" fill="currentColor" opacity="0.18"/>
             <path d="M4 156 C4 112 116 112 116 156" fill="currentColor" opacity="0.12"/>
             <circle cx="60" cy="52" r="28" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
             <path d="M6 154 C6 114 114 114 114 154" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
           </svg>
-
-          <p class="placeholder-title">Vaša fotografija</p>
-          <span class="placeholder-note">Zamijenite s pravom fotografijom</span>
-
-          <!-- Kutni okviri za premium look -->
+          <p class="placeholder-title">Ihr Foto hier</p>
+          <span class="placeholder-note">Ersetzen Sie dies durch ein echtes Foto</span>
           <span class="ph-corner ph-tl"></span>
           <span class="ph-corner ph-tr"></span>
           <span class="ph-corner ph-bl"></span>
@@ -211,38 +206,29 @@
       </div>
 
       <div class="about-text">
-        <p class="eyebrow">O nama</p>
-        <h2>Spoj <em>tradicije</em> i moderne stomatologije</h2>
-
-        <!--
-          UPUTA: Zamijeni donje tekstove s opisom ordinacije.
-          3–5 rečenica koje pacijentima daju osjećaj povjerenja i topline.
-        -->
+        <p class="eyebrow">Über uns</p>
+        <h2>Zahnmedizin mit <em>künstlerischem</em> Anspruch</h2>
         <p>
-          Zahnaesthetika je osnovana s jednim ciljem — pružiti pacijentima
-          stomatološku skrb kakvu zaslužuju: stručnu, brižnu i bez boli.
-          Naš tim iskusnih stomatologa koristi najmoderniju opremu i materijale
-          europske kvalitete.
+          Unser Team verbindet klassische und moderne Zahnmedizin mit künstlerischem Anspruch.
+          Wir legen großen Wert auf persönliche Betreuung und ein stressfreies Behandlungserlebnis.
         </p>
         <p>
-          Naš pristup spaja vrhunsku tehnologiju s individualnom skrbi.
-          Svaki pacijent zaslužuje vrijeme, pažnju i tretman izrađen baš za njega.
-          U Zahnaesthetika ordinaciji, vaš osmijeh je naša misija.
+          Wir bieten Ihnen eine Kombination aus Präzision, Erfahrung und Ästhetik,
+          damit Ihr Lächeln gesund und schön bleibt.
         </p>
 
-        <!-- UPUTA: Prilagodi statističke brojeve (data-target = broj do kojeg broji) -->
         <div class="about-stats">
           <div>
             <div class="stat-num" data-target="15" data-suffix="+">15+</div>
-            <div class="stat-label">Godina iskustva</div>
+            <div class="stat-label">Jahre Erfahrung</div>
           </div>
           <div>
-            <div class="stat-num" data-target="5000" data-suffix="+">5 000+</div>
-            <div class="stat-label">Zadovoljnih pacijenata</div>
+            <div class="stat-num" data-target="5000" data-suffix="+">5.000+</div>
+            <div class="stat-label">Zufriedene Patienten</div>
           </div>
           <div>
             <div class="stat-num" data-target="100" data-suffix="%">100%</div>
-            <div class="stat-label">Posvećenost</div>
+            <div class="stat-label">Persönliche Betreuung</div>
           </div>
         </div>
       </div>
@@ -252,96 +238,78 @@
 </section>
 
 
-<!-- ============================================================
-     USLUGE
-     ============================================================ -->
-<section id="usluge">
+<!-- LEISTUNGEN -->
+<section id="leistungen">
   <div class="container">
     <div class="section-header reveal">
-      <p class="eyebrow">Naše usluge</p>
-      <h2>Cjelokupna stomatološka <em>skrb</em> na jednom mjestu</h2>
+      <p class="eyebrow">Leistungen</p>
+      <h2>Umfassende Zahnmedizin <em>aus einer Hand</em></h2>
     </div>
 
-    <!-- Split layout: foto lijevo, kartice usluga desno -->
     <div class="services-split reveal">
 
-      <!-- FOTO — privremeno koristi sliku ordinacije iz galerije;
-           zamijeni s assets/usluge.jpg kad imaš bolju fotografiju -->
       <div class="services-photo">
-        <img src="assets/gallery-2.jpg"
-             alt="Moderna stomatološka ordinacija"
-             loading="lazy" />
+        <img src="assets/gallery-2.jpg" alt="Moderne Zahnarztpraxis" loading="lazy" />
         <div class="services-photo-caption">
-          <p class="eyebrow">Sve na jednom mjestu</p>
-          <p>Vrhunska tehnologija u službi vašeg osmijehа.</p>
+          <p class="eyebrow">Alles aus einer Hand</p>
+          <p>Modernste Technologie für Ihr Lächeln.</p>
         </div>
       </div>
 
-      <!-- UPUTA: Dodaj, ukloni ili uredi kartice usluga -->
       <div class="services-grid-2col stagger">
+
+        <div class="service-card">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          <div class="service-num">01</div>
+          <h3>Professionelle Zahnreinigung</h3>
+          <p>Entfernung von Zahnstein und Belägen für ein strahlendes Lächeln und langfristig gesundes Zahnfleisch.</p>
+        </div>
+
+        <div class="service-card">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <div class="service-num">02</div>
+          <h3>Radiologische Diagnostik</h3>
+          <p>Digitales Röntgen für präzise Diagnosen mit minimaler Strahlenbelastung und maximaler Sicherheit.</p>
+        </div>
+
+        <div class="service-card">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+          <div class="service-num">03</div>
+          <h3>Konservierende Zahnmedizin</h3>
+          <p>Schonende Behandlung von Karies und ästhetisch hochwertige Füllungen zum Erhalt Ihrer natürlichen Zähne.</p>
+        </div>
+
+        <div class="service-card">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>
+          </svg>
+          <div class="service-num">04</div>
+          <h3>Wurzelkanalbehandlung</h3>
+          <p>Schmerzfreie Endodontie zum Erhalt Ihrer natürlichen Zähne, sicher und präzise durchgeführt.</p>
+        </div>
+
+        <div class="service-card">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+          <div class="service-num">05</div>
+          <h3>Zahnersatz</h3>
+          <p>Maßgefertigte Kronen, Brücken und Prothesen für natürliche Ästhetik und optimale Funktion.</p>
+        </div>
 
         <div class="service-card">
           <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
           </svg>
-          <div class="service-num">01</div>
-          <h3>Estetska stomatologija</h3>
-          <p>Bjeljenje zubi, ljuskice i kompozitne nadogradnje za savršen osmijeh.</p>
-        </div>
-
-        <div class="service-card">
-          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="9"/>
-            <line x1="12" y1="8" x2="12" y2="16"/>
-            <line x1="8" y1="12" x2="16" y2="12"/>
-          </svg>
-          <div class="service-num">02</div>
-          <h3>Implantologija</h3>
-          <p>Trajna i prirodna zamjena izgubljenih zubi vrhunskim implantatima.</p>
-        </div>
-
-        <div class="service-card">
-          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M2 18l2.5-11 4 4L12 3l3.5 8 4-4L22 18H2z"/>
-            <line x1="2" y1="18" x2="22" y2="18"/>
-          </svg>
-          <div class="service-num">03</div>
-          <h3>Protetika</h3>
-          <p>Krunice, mostovi i proteze izrađeni s preciznošću i pažnjom.</p>
-        </div>
-
-        <div class="service-card">
-          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" aria-hidden="true">
-            <line x1="4"  y1="5"  x2="20" y2="5"/>
-            <line x1="4"  y1="12" x2="20" y2="12"/>
-            <line x1="4"  y1="19" x2="20" y2="19"/>
-            <circle cx="9"  cy="5"  r="2" fill="hsl(35,45%,48%)" stroke="none"/>
-            <circle cx="15" cy="12" r="2" fill="hsl(35,45%,48%)" stroke="none"/>
-            <circle cx="9"  cy="19" r="2" fill="hsl(35,45%,48%)" stroke="none"/>
-          </svg>
-          <div class="service-num">04</div>
-          <h3>Ortodoncija</h3>
-          <p>Klasične i nevidljive (Invisalign) opcije za savršeno poravnanje.</p>
-        </div>
-
-        <div class="service-card">
-          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" aria-hidden="true">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            <line x1="12" y1="9"  x2="12" y2="15"/>
-            <line x1="9"  y1="12" x2="15" y2="12"/>
-          </svg>
-          <div class="service-num">05</div>
-          <h3>Konzervativna stomatologija</h3>
-          <p>Bezbolno liječenje karijesa i estetske ispune.</p>
-        </div>
-
-        <div class="service-card">
-          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-          </svg>
           <div class="service-num">06</div>
-          <h3>Dječja stomatologija</h3>
-          <p>Posebna briga i prilagođen pristup najmlađim pacijentima.</p>
+          <h3>Ästhetische Zahnmedizin</h3>
+          <p>Smile Design, Veneers, Bleaching und ICON für Ihr Traumlächeln durch modernste ästhetische Behandlungen.</p>
         </div>
 
         <div class="service-card">
@@ -350,20 +318,18 @@
             <path d="M4 4l14 14"/>
           </svg>
           <div class="service-num">07</div>
-          <h3>Parodontologija</h3>
-          <p>Liječenje zubnog mesa i prevencija parodontoze.</p>
+          <h3>Parodontologie</h3>
+          <p>Behandlung von Zahnfleischerkrankungen und Zahnfleisch-Chirurgie für langfristige Zahngesundheit.</p>
         </div>
 
         <div class="service-card">
           <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" aria-hidden="true">
-            <path d="M12 2L5.5 13a8 8 0 1 0 13 0L12 2z"/>
-            <line x1="9"  y1="15" x2="10" y2="13"/>
-            <line x1="14" y1="14" x2="15" y2="12"/>
-            <line x1="11" y1="18" x2="12" y2="16"/>
+            <circle cx="12" cy="8" r="6"/>
+            <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/>
           </svg>
           <div class="service-num">08</div>
-          <h3>Profesionalna higijena</h3>
-          <p>Uklanjanje kamenca i poliranje za zdrave zube i desni.</p>
+          <h3>Implantologie &amp; Chirurgie</h3>
+          <p>Dauerhafte Zahnimplantate als natürlicher Ersatz für fehlende Zähne, für höchste Lebensqualität.</p>
         </div>
 
       </div>
@@ -372,184 +338,85 @@
 </section>
 
 
-
-
-<!-- ============================================================
-     GALERIJA
-     ============================================================ -->
-<section id="galerija">
+<!-- GALERIE -->
+<section id="galerie">
   <div class="container">
     <div class="section-header reveal">
-      <p class="eyebrow">Galerija</p>
-      <h2>Prostor osmišljen za vaš <em>mir</em></h2>
+      <p class="eyebrow">Galerie</p>
+      <h2>Ein Raum, der für Ihr <em>Wohlbefinden</em> gestaltet wurde</h2>
     </div>
 
-    <!--
-      UPUTA: Zamijeni slike s fotografijama ordinacije.
-      Stavi slike u assets/ folder (npr. assets/galerija-1.jpg).
-      Klikni na sliku u pregledniku za prikaz u punoj veličini (lightbox).
-      Preporučena veličina: 1200×900px, JPEG, optimizirano.
-    -->
     <div class="gallery-grid reveal">
 
-      <div class="gallery-item" tabindex="0" role="button" aria-label="Povećaj sliku: Recepcija">
-        <img src="assets/gallery-1.jpg" alt="Recepcija ordinacije" loading="lazy" />
-        <div class="gallery-overlay"><span>Recepcija</span></div>
+      <div class="gallery-item" tabindex="0" role="button" aria-label="Bild vergrößern: Empfang">
+        <img src="assets/gallery-1.jpg" alt="Empfang der Praxis" loading="lazy" />
+        <div class="gallery-overlay"><span>Empfang</span></div>
       </div>
 
-      <div class="gallery-item" tabindex="0" role="button" aria-label="Povećaj sliku: Ordinacija">
-        <img src="assets/gallery-2.jpg" alt="Ordinacija" loading="lazy" />
-        <div class="gallery-overlay"><span>Ordinacija</span></div>
+      <div class="gallery-item" tabindex="0" role="button" aria-label="Bild vergrößern: Behandlungsraum">
+        <img src="assets/gallery-2.jpg" alt="Behandlungsraum" loading="lazy" />
+        <div class="gallery-overlay"><span>Behandlungsraum</span></div>
       </div>
 
-      <div class="gallery-item" tabindex="0" role="button" aria-label="Povećaj sliku: Oprema">
-        <img src="assets/gallery-3.jpg" alt="Dentalna oprema" loading="lazy" />
-        <div class="gallery-overlay"><span>Dentalna oprema</span></div>
+      <div class="gallery-item" tabindex="0" role="button" aria-label="Bild vergrößern: Dentalgeräte">
+        <img src="assets/gallery-3.jpg" alt="Dentalgeräte" loading="lazy" />
+        <div class="gallery-overlay"><span>Dentalgeräte</span></div>
       </div>
 
-      <div class="gallery-item" tabindex="0" role="button" aria-label="Povećaj sliku: Čekaonica">
-        <img src="assets/gallery-4.jpg" alt="Čekaonica" loading="lazy" />
-        <div class="gallery-overlay"><span>Čekaonica</span></div>
+      <div class="gallery-item" tabindex="0" role="button" aria-label="Bild vergrößern: Wartebereich">
+        <img src="assets/gallery-4.jpg" alt="Wartebereich" loading="lazy" />
+        <div class="gallery-overlay"><span>Wartebereich</span></div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- Lightbox za galeriju -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galerija">
-  <button class="lightbox-close" id="lightbox-close" aria-label="Zatvori">✕</button>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galerie">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Schließen">&#x2715;</button>
   <img id="lightbox-img" src="" alt="" />
 </div>
 
 
-<!-- ============================================================
-     RECENZIJE
-     ============================================================ -->
-<section id="recenzije">
-  <div class="container">
-    <div class="section-header reveal">
-      <p class="eyebrow">Recenzije</p>
-      <h2>Riječi naših <em>pacijenata</em></h2>
-    </div>
-
-    <!--
-      UPUTA: Zamijeni recenzije s pravim recenzijama pacijenata.
-      Svaki article = jedna recenzija.
-    -->
-    <div class="reviews-grid stagger">
-
-      <article class="review-card hover-lift">
-        <svg class="quote-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
-          <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/>
-          <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/>
-        </svg>
-        <p class="review-text">"Najbolja ordinacija u kojoj sam ikad bila. Profesionalnost, ljubaznost i potpuno bezbolan tretman."</p>
-        <div class="review-footer">
-          <div class="review-avatar">A</div>
-          <div>
-            <div class="review-name">Ana M.</div>
-            <div class="review-role">Pacijent</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="review-card hover-lift">
-        <svg class="quote-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
-          <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/>
-          <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/>
-        </svg>
-        <p class="review-text">"Konačno sam pronašao stomatologa kojemu vjerujem. Tim je izvanredan, a prostor predivan."</p>
-        <div class="review-footer">
-          <div class="review-avatar">M</div>
-          <div>
-            <div class="review-name">Marko P.</div>
-            <div class="review-role">Pacijent</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="review-card hover-lift">
-        <svg class="quote-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
-          <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/>
-          <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/>
-        </svg>
-        <p class="review-text">"Estetski tretman je nadmašio sva očekivanja. Topla preporuka svima!"</p>
-        <div class="review-footer">
-          <div class="review-avatar">I</div>
-          <div>
-            <div class="review-name">Ivana K.</div>
-            <div class="review-role">Pacijent</div>
-          </div>
-        </div>
-      </article>
-
-    </div>
-
-    <!--
-      UPUTA: Zamijeni # s linkom na Google recenzije tvoje ordinacije.
-      Npr: https://g.page/r/TVOJ_PLACE_ID/review
-    -->
-    <div class="reviews-cta">
-      <a href="#" target="_blank" rel="noopener noreferrer">
-        Pogledaj sve recenzije na Google&#8209;u
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true">
-          <path d="M7 17L17 7M17 7H7M17 7v10"/>
-        </svg>
-      </a>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ============================================================
-     RADNO VRIJEME
-     ============================================================ -->
-<section id="radno-vrijeme">
+<!-- ÖFFNUNGSZEITEN -->
+<section id="oeffnungszeiten">
   <div class="container">
     <div class="hours-grid reveal">
 
       <div class="hours-intro">
-        <p class="eyebrow">Radno vrijeme</p>
-        <h2>Tu smo za vas <em>kad god trebate</em></h2>
-        <!-- UPUTA: Prilagodi tekst -->
-        <p>Termini se zakazuju unaprijed. U hitnim slučajevima nazovite nas — uvijek pronađemo rješenje.</p>
+        <p class="eyebrow">Öffnungszeiten</p>
+        <h2>Wir sind für Sie da, <em>wann immer Sie uns brauchen</em></h2>
+        <p>Termine werden im Voraus vereinbart. In dringenden Fällen rufen Sie uns bitte an, wir finden immer eine Lösung.</p>
       </div>
 
-      <!--
-        UPUTA: Prilagodi radno vrijeme.
-        data-day = dan u tjednu (0=Nedjelja, 1=Ponedjeljak, ..., 6=Subota)
-        JavaScript automatski označava današnji dan zlatnom bojom.
-      -->
       <div class="hours-list">
         <div class="hours-row" data-day="1">
-          <span class="day-name">Ponedjeljak</span>
-          <span class="day-time">08:00 — 20:00</span>
+          <span class="day-name">Montag</span>
+          <span class="day-time">08:00 &ndash; 20:00</span>
         </div>
         <div class="hours-row" data-day="2">
-          <span class="day-name">Utorak</span>
-          <span class="day-time">08:00 — 20:00</span>
+          <span class="day-name">Dienstag</span>
+          <span class="day-time">08:00 &ndash; 20:00</span>
         </div>
         <div class="hours-row" data-day="3">
-          <span class="day-name">Srijeda</span>
-          <span class="day-time">08:00 — 20:00</span>
+          <span class="day-name">Mittwoch</span>
+          <span class="day-time">08:00 &ndash; 20:00</span>
         </div>
         <div class="hours-row" data-day="4">
-          <span class="day-name">Četvrtak</span>
-          <span class="day-time">08:00 — 20:00</span>
+          <span class="day-name">Donnerstag</span>
+          <span class="day-time">08:00 &ndash; 20:00</span>
         </div>
         <div class="hours-row" data-day="5">
-          <span class="day-name">Petak</span>
-          <span class="day-time">08:00 — 16:00</span>
+          <span class="day-name">Freitag</span>
+          <span class="day-time">08:00 &ndash; 16:00</span>
         </div>
         <div class="hours-row" data-day="6">
-          <span class="day-name">Subota</span>
-          <span class="day-time">09:00 — 13:00</span>
+          <span class="day-name">Samstag</span>
+          <span class="day-time">09:00 &ndash; 13:00</span>
         </div>
         <div class="hours-row" data-day="0">
-          <span class="day-name">Nedjelja</span>
-          <span class="day-time closed">Zatvoreno</span>
+          <span class="day-name">Sonntag</span>
+          <span class="day-time closed">Geschlossen</span>
         </div>
       </div>
 
@@ -558,23 +425,19 @@
 </section>
 
 
-<!-- ============================================================
-     KONTAKT
-     ============================================================ -->
+<!-- KONTAKT -->
 <section id="kontakt">
   <div class="container">
     <div class="section-header reveal">
       <p class="eyebrow">Kontakt</p>
-      <h2>Zakažite svoj <em>termin</em></h2>
+      <h2>Vereinbaren Sie Ihren <em>Termin</em></h2>
     </div>
 
     <div class="contact-grid reveal">
 
-      <!-- Kontakt informacije -->
       <div class="contact-info">
 
-        <!-- UPUTA: Zamijeni broj telefona -->
-        <a href="tel:+38512345678" class="contact-item">
+        <a href="#" class="contact-item">
           <div class="contact-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
               <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
@@ -582,13 +445,11 @@
           </div>
           <div>
             <div class="contact-label">Telefon</div>
-            <!-- UPUTA: Zamijeni s pravim brojem -->
-            <div class="contact-value">+385 1 234 5678</div>
+            <div class="contact-value">Wird bald bekannt gegeben</div>
           </div>
         </a>
 
-        <!-- UPUTA: Zamijeni email adresu -->
-        <a href="mailto:info@dentalis.hr" class="contact-item">
+        <a href="#" class="contact-item">
           <div class="contact-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
@@ -596,14 +457,12 @@
             </svg>
           </div>
           <div>
-            <div class="contact-label">Email</div>
-            <!-- UPUTA: Zamijeni s pravim emailom -->
-            <div class="contact-value">info@dentalis.hr</div>
+            <div class="contact-label">E-Mail</div>
+            <div class="contact-value">Wird bald bekannt gegeben</div>
           </div>
         </a>
 
-        <!-- UPUTA: Zamijeni adresu i link na mapu -->
-        <a href="#mapa" class="contact-item">
+        <a href="#standort" class="contact-item">
           <div class="contact-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
@@ -611,45 +470,13 @@
             </svg>
           </div>
           <div>
-            <div class="contact-label">Adresa</div>
-            <!-- UPUTA: Zamijeni s pravom adresom -->
-            <div class="contact-value">Ilica 1, 10000 Zagreb</div>
+            <div class="contact-label">Adresse</div>
+            <div class="contact-value">Nonntaler Hauptstraße 49, 5020 Salzburg</div>
           </div>
         </a>
 
-        <!--
-          UPUTA: Uncommentaj ovo ako imaš WhatsApp
-          <a href="https://wa.me/385912345678" class="contact-item" target="_blank" rel="noopener">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.116 1.523 5.847L0 24l6.302-1.49A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.002-1.371l-.36-.214-3.732.881.899-3.646-.235-.374A9.77 9.77 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/>
-              </svg>
-            </div>
-            <div>
-              <div class="contact-label">WhatsApp</div>
-              <div class="contact-value">+385 91 234 5678</div>
-            </div>
-          </a>
-        -->
-
       </div>
 
-      <!--
-        ╔══════════════════════════════════════════════════════════╗
-        ║  KONTAKT FORMA — slanje emaila                           ║
-        ║                                                           ║
-        ║  OPCIJA A — Formspree (preporučeno, besplatno):          ║
-        ║  1. Idi na https://formspree.io                          ║
-        ║  2. Napravi besplatni račun i novi form                  ║
-        ║  3. Zamijeni "ZAMIJENI_S_TVOJIM_KODOM" s tvojim kodom   ║
-        ║     (npr. xrgvbbcd)                                       ║
-        ║                                                           ║
-        ║  OPCIJA B — Ako nemaš Formspree:                         ║
-        ║  Forma će automatski otvoriti tvoj email program         ║
-        ║  s predpopunjenom porukom (mailto fallback).             ║
-        ╚══════════════════════════════════════════════════════════╝
-      -->
       <form
         class="contact-form"
         id="contact-form"
@@ -658,13 +485,13 @@
         novalidate
       >
         <div class="form-group">
-          <label for="cf-name">Ime i prezime *</label>
+          <label for="cf-name">Vor- und Nachname *</label>
           <input type="text" id="cf-name" name="name" required maxlength="100" autocomplete="name" />
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label for="cf-email">Email *</label>
+            <label for="cf-email">E-Mail *</label>
             <input type="email" id="cf-email" name="email" required maxlength="255" autocomplete="email" />
           </div>
           <div class="form-group">
@@ -674,16 +501,16 @@
         </div>
 
         <div class="form-group">
-          <label for="cf-message">Poruka *</label>
+          <label for="cf-message">Nachricht *</label>
           <textarea id="cf-message" name="message" rows="4" required maxlength="1000"></textarea>
         </div>
 
         <label class="gdpr-label">
           <input type="checkbox" id="gdpr" name="gdpr" required />
-          <span>Slažem se s obradom osobnih podataka u svrhu odgovora na upit (GDPR).</span>
+          <span>Ich stimme der Verarbeitung meiner personenbezogenen Daten zur Beantwortung meiner Anfrage zu (DSGVO).</span>
         </label>
 
-        <button type="submit" class="btn-submit" id="submit-btn">Pošalji upit</button>
+        <button type="submit" class="btn-submit" id="submit-btn">Anfrage senden</button>
       </form>
 
     </div>
@@ -691,26 +518,18 @@
 </section>
 
 
-<!-- ============================================================
-     MAPA
-     ============================================================ -->
-<section id="mapa">
+<!-- STANDORT -->
+<section id="standort">
   <div class="container">
     <div class="map-header reveal">
-      <p class="eyebrow">Lokacija</p>
-      <h2>Pronađite nas</h2>
+      <p class="eyebrow">Standort</p>
+      <h2>So finden Sie uns</h2>
+      <p class="map-address">Nonntaler Hauptstraße 49, 5020 Salzburg</p>
     </div>
     <div class="map-wrap reveal">
-      <!--
-        UPUTA: Kako dobiti Google Maps embed link za svoju adresu:
-        1. Idi na maps.google.com
-        2. Traži svoju adresu / ordinaciju
-        3. Klikni Share → Embed a map
-        4. Kopiraj src atribut iz iframe koda i zamijeni donji src
-      -->
       <iframe
-        title="Lokacija ordinacije Zahnaesthetika"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2782.748973!2d15.9742!3d45.8131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d701b1ea8839%3A0x3a45249628fbc28a!2sIlica%201%2C%2010000%2C%20Zagreb!5e0!3m2!1shr!2shr!4v1700000000000"
+        title="Standort der Praxis Zahnaesthetika"
+        src="https://maps.google.com/maps?q=Nonntaler+Hauptstra%C3%9Fe+49,+5020+Salzburg,+Austria&t=&z=15&ie=UTF8&iwloc=&output=embed"
         allowfullscreen
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
@@ -720,9 +539,7 @@
 </section>
 
 
-<!-- ============================================================
-     FOOTER
-     ============================================================ -->
+<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -732,9 +549,8 @@
           <img src="images/logo/svg2.svg" alt="" class="logo-svg" aria-hidden="true" />
           <span class="logo-text"><span class="logo-initial">Z</span>ahnaesthetika</span>
         </a>
-        <p>Vrhunska stomatološka skrb u atmosferi mira i povjerenja. Vaš osmijeh — naša najveća umjetnost.</p>
+        <p>Ihre moderne Zahnarztpraxis in Salzburg, wo Zahnmedizin auf Kunst trifft. Unser Ziel: Ihr Lächeln in besten Händen.</p>
         <div class="social-links">
-          <!-- UPUTA: Zamijeni # s pravim linkovima -->
           <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
@@ -753,64 +569,52 @@
       <div class="footer-col">
         <h4>Kontakt</h4>
         <ul>
-          <!-- UPUTA: Zamijeni s pravim podacima -->
-          <li>Ilica 1, 10000 Zagreb</li>
-          <li>+385 1 234 5678</li>
-          <li>info@dentalis.hr</li>
+          <li>Nonntaler Hauptstraße 49</li>
+          <li>5020 Salzburg, Österreich</li>
+          <li>Tel: wird bald bekannt gegeben</li>
+          <li>E-Mail: wird bald bekannt gegeben</li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4>Pravno</h4>
+        <h4>Rechtliches</h4>
         <ul>
-          <!--
-            UPUTA: Dodaj prave linkove na pravne dokumente.
-            Besplatni generator za RH: iubenda.com
-          -->
-          <li><a href="#">Politika privatnosti</a></li>
-          <li><a href="#">Uvjeti korištenja</a></li>
-          <li><a href="#">Kolačići</a></li>
+          <li><a href="#">Datenschutzerklärung</a></li>
+          <li><a href="#">Impressum</a></li>
+          <li><a href="#">Cookie-Richtlinie</a></li>
         </ul>
       </div>
 
     </div>
 
     <div class="footer-bottom">
-      <!-- UPUTA: Zamijeni OIB i puni naziv firme s pravim podacima -->
-      <div>© <span id="year"></span> Zahnaesthetika — Sva prava pridržana.</div>
-      <div>Ilica 1, 10000 Zagreb</div>
+      <div>&#169; <span id="year"></span> Zahnordination Zahnaesthetika. Alle Rechte vorbehalten.</div>
+      <div>Nonntaler Hauptstraße 49, 5020 Salzburg, Österreich</div>
     </div>
   </div>
 </footer>
 
 
-<!-- ============================================================
-     SCROLL TO TOP GUMB
-     ============================================================ -->
-<button id="scroll-top" aria-label="Natrag na vrh stranice">
+<!-- SCROLL TO TOP -->
+<button id="scroll-top" aria-label="Zurück nach oben">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
     <polyline points="18 15 12 9 6 15"/>
   </svg>
 </button>
 
-<!-- Toast notifikacija -->
 <div class="toast" id="toast" role="alert" aria-live="polite"></div>
 
-<!-- ============================================================
-     COOKIE BANNER (GDPR)
-     ============================================================ -->
-<div id="cookie-banner" role="dialog" aria-label="Obavijest o kolačićima">
+<!-- COOKIE BANNER -->
+<div id="cookie-banner" role="dialog" aria-label="Cookie-Hinweis">
   <p>
-    Koristimo kolačiće (cookies) kako bismo poboljšali vaše iskustvo na stranici.
-    Za više informacija pogledajte našu <a href="#">Politiku privatnosti</a>.
+    Wir verwenden Cookies, um Ihr Erlebnis auf unserer Website zu verbessern.
+    Weitere Informationen finden Sie in unserer <a href="#">Datenschutzerklärung</a>.
   </p>
   <div class="cookie-btns">
-    <button class="cookie-accept" id="cookie-accept">Prihvati sve</button>
-    <button class="cookie-reject" id="cookie-reject">Samo nužni</button>
+    <button class="cookie-accept" id="cookie-accept">Alle akzeptieren</button>
+    <button class="cookie-reject" id="cookie-reject">Nur notwendige</button>
   </div>
 </div>
-
-
 
 <script src="script.js"></script>
 </body>

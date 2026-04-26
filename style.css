@@ -1,30 +1,30 @@
 /* ============================================================
-   style.css — Dentalis stomatološka ordinacija
-   Premium & Editorial — krem/bež + zlatni akcenti
+   style.css — Zahnordination Zahnaesthetika, Salzburg
+   Premium & Editorial — Crna / Bijela / Roza
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
 
-/* --- CSS varijable --- */
+/* --- CSS varijable — Crna / Bijela / Roza tema --- */
 :root {
-  --gold:        hsl(35, 45%, 48%);
-  --gold-light:  hsl(40, 65%, 65%);
-  --gold-dark:   hsl(32, 50%, 35%);
-  --cream:       hsl(36, 30%, 96%);
-  --cream-deep:  hsl(32, 22%, 88%);
-  --espresso:    hsl(25, 20%, 14%);
-  --border:      hsl(30, 18%, 85%);
-  --muted:       hsl(34, 20%, 92%);
-  --muted-fg:    hsl(25, 12%, 38%);
-  --card:        hsl(36, 35%, 98%);
+  --gold:        hsl(340, 30%, 58%);
+  --gold-light:  hsl(336, 38%, 74%);
+  --gold-dark:   hsl(336, 34%, 44%);
+  --cream:       hsl(0, 0%, 99%);
+  --cream-deep:  hsl(340, 14%, 95%);
+  --espresso:    hsl(340, 10%, 10%);
+  --border:      hsl(340, 16%, 89%);
+  --muted:       hsl(340, 10%, 96%);
+  --muted-fg:    hsl(340, 6%, 44%);
+  --card:        hsl(0, 0%, 100%);
 
-  --gradient-hero:  linear-gradient(135deg, hsl(25 20% 14% / 0.62), hsl(25 20% 14% / 0.22));
+  --gradient-hero:  linear-gradient(160deg, hsl(340 10% 6% / 0.82) 0%, hsl(340 20% 14% / 0.28) 100%);
   --gradient-gold:  linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
-  --gradient-cream: linear-gradient(180deg, var(--cream), var(--cream-deep));
+  --gradient-cream: linear-gradient(160deg, hsl(0, 0%, 100%) 0%, hsl(340, 16%, 97%) 55%, hsl(338, 22%, 95%) 100%);
 
-  --shadow-elegant: 0 25px 60px -20px hsl(25 20% 14% / 0.18);
-  --shadow-soft:    0 8px 30px -8px hsl(25 20% 14% / 0.10);
-  --shadow-gold:    0 10px 40px -10px hsl(35 45% 48% / 0.35);
+  --shadow-elegant: 0 25px 60px -20px hsl(340 10% 10% / 0.18);
+  --shadow-soft:    0 8px 30px -8px hsl(340 10% 10% / 0.10);
+  --shadow-gold:    0 10px 40px -10px hsl(340 30% 58% / 0.28);
 
   --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
   --font-display: 'Cormorant Garamond', Georgia, serif;
@@ -121,13 +121,13 @@ h1, h2, h3, h4 {
   z-index: 100;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  background: hsl(36 30% 96% / 0.72);
+  background: hsl(0 0% 99% / 0.75);
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s, background 0.3s, box-shadow 0.3s;
 }
 #navbar.scrolled {
   border-bottom-color: var(--border);
-  background: hsl(36 30% 96% / 0.96);
+  background: hsl(0 0% 99% / 0.97);
   box-shadow: var(--shadow-soft);
 }
 .navbar-inner {
@@ -160,7 +160,7 @@ h1, h2, h3, h4 {
 .nav-links a {
   font-size: 0.85rem;
   letter-spacing: 0.04em;
-  color: hsl(25 20% 14% / 0.75);
+  color: hsl(340 8% 10% / 0.72);
   transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--gold); }
@@ -169,12 +169,22 @@ h1, h2, h3, h4 {
   font-size: 0.68rem;
   text-transform: uppercase;
   letter-spacing: 0.25em;
-  border: 1px solid var(--gold);
-  color: var(--gold);
   padding: 0.6rem 1.25rem;
-  transition: background 0.2s, color 0.2s;
+  border: none;
+  color: hsl(0, 0%, 100%);
+  background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 55%, var(--gold-light) 100%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  box-shadow: 0 3px 14px -3px hsl(340 30% 50% / 0.32);
+  transition: background-position 0.5s var(--ease-smooth),
+              box-shadow 0.4s var(--ease-smooth),
+              transform 0.3s var(--ease-smooth);
 }
-.nav-cta:hover { background: var(--gold); color: var(--cream); }
+.nav-cta:hover {
+  background-position: 0% 0;
+  box-shadow: 0 6px 20px -4px hsl(340 30% 50% / 0.45);
+  transform: translateY(-1px);
+}
 
 .hamburger {
   display: none;
@@ -198,7 +208,7 @@ h1, h2, h3, h4 {
 .mobile-menu {
   display: none;
   border-top: 1px solid var(--border);
-  background: hsl(36 30% 96% / 0.98);
+  background: hsl(0 0% 99% / 0.98);
   backdrop-filter: blur(14px);
 }
 .mobile-menu.open { display: block; }
@@ -210,7 +220,7 @@ h1, h2, h3, h4 {
 }
 .mobile-menu a {
   font-size: 1rem;
-  color: hsl(25 20% 14% / 0.8);
+  color: hsl(340 8% 10% / 0.78);
   padding: 0.25rem 0;
   transition: color 0.2s;
 }
@@ -249,29 +259,29 @@ h1, h2, h3, h4 {
 .hero-glass {
   display: inline-block;
   padding: 2.75rem 4rem;
-  background: hsl(36 30% 96% / 0.13);
+  background: hsl(0 0% 100% / 0.09);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid hsl(36 35% 98% / 0.22);
+  border: 1px solid hsl(0 0% 100% / 0.22);
   border-radius: var(--radius);
 }
 .hero-glass .eyebrow {
-  color: hsl(36 35% 98% / 0.88);
+  color: hsl(0 0% 100% / 0.9);
   justify-content: center;
   margin-bottom: 1.5rem;
 }
-.hero-glass .eyebrow::before { background: hsl(36 35% 98% / 0.55); }
+.hero-glass .eyebrow::before { background: hsl(0 0% 100% / 0.55); }
 .hero-glass h1 {
   font-size: clamp(3rem, 8vw, 6rem);
   line-height: 1.05;
-  color: hsl(36 35% 98%);
+  color: hsl(0 0% 100%);
   margin-bottom: 1.25rem;
 }
 .hero-glass h1 em { font-style: italic; color: var(--gold-light); }
 .hero-glass p {
   max-width: 36rem;
   margin-inline: auto;
-  color: hsl(36 35% 98% / 0.82);
+  color: hsl(0 0% 100% / 0.82);
   font-size: 1.05rem;
   font-weight: 300;
   line-height: 1.75;
@@ -285,29 +295,57 @@ h1, h2, h3, h4 {
   gap: 1rem;
 }
 .btn-primary {
-  background: var(--gold);
-  color: var(--cream);
+  background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 55%, var(--gold-light) 100%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  color: hsl(0, 0%, 100%);
   font-size: 0.68rem;
   text-transform: uppercase;
   letter-spacing: 0.25em;
-  padding: 0.9rem 2rem;
+  padding: 0.85rem 1.75rem;
+  min-width: 11rem;
+  text-align: center;
   border: none;
-  transition: background 0.2s;
+  position: relative;
+  overflow: hidden;
   display: inline-block;
+  transition: background-position 0.5s var(--ease-smooth),
+              box-shadow 0.4s var(--ease-smooth),
+              transform 0.3s var(--ease-smooth);
+  box-shadow: 0 4px 20px -4px hsl(340 30% 50% / 0.35);
 }
-.btn-primary:hover { background: var(--gold-dark); }
+.btn-primary:hover {
+  background-position: 0% 0;
+  box-shadow: 0 8px 28px -6px hsl(340 30% 50% / 0.5);
+  transform: translateY(-2px);
+}
+.btn-primary:active { transform: translateY(0); }
+
 .btn-outline {
-  border: 1px solid hsl(36 35% 98% / 0.4);
-  color: hsl(36 35% 98%);
+  border: 1px solid hsl(0 0% 100% / 0.5);
+  color: hsl(0 0% 100%);
   font-size: 0.68rem;
   text-transform: uppercase;
   letter-spacing: 0.25em;
-  padding: 0.9rem 2rem;
-  background: none;
-  transition: background 0.2s;
+  padding: 0.85rem 1.75rem;
+  min-width: 11rem;
+  text-align: center;
+  background: hsl(0 0% 100% / 0.05);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   display: inline-block;
+  transition: background 0.35s var(--ease-smooth),
+              border-color 0.35s var(--ease-smooth),
+              box-shadow 0.35s var(--ease-smooth),
+              transform 0.3s var(--ease-smooth);
 }
-.btn-outline:hover { background: hsl(36 35% 98% / 0.1); }
+.btn-outline:hover {
+  background: hsl(0 0% 100% / 0.14);
+  border-color: hsl(0 0% 100% / 0.75);
+  box-shadow: 0 4px 20px -4px hsl(0 0% 0% / 0.2);
+  transform: translateY(-2px);
+}
+.btn-outline:active { transform: translateY(0); }
 
 .scroll-indicator {
   position: absolute;
@@ -317,7 +355,7 @@ h1, h2, h3, h4 {
   z-index: 10;
   width: 1px;
   height: 4rem;
-  background: linear-gradient(to bottom, transparent, hsl(36 35% 98% / 0.55));
+  background: linear-gradient(to bottom, transparent, hsl(0 0% 100% / 0.55));
   animation: pulse-anim 2s ease-in-out infinite;
 }
 
@@ -333,7 +371,7 @@ h1, h2, h3, h4 {
 /* ============================================================
    O NAMA
    ============================================================ */
-#o-nama { padding: 7rem 0; background: var(--cream); }
+#ueber-uns { padding: 7rem 0; background: var(--cream); }
 
 .about-grid {
   display: grid;
@@ -388,7 +426,7 @@ h1, h2, h3, h4 {
 /* ============================================================
    USLUGE
    ============================================================ */
-#usluge { padding: 7rem 0; background: var(--gradient-cream); }
+#leistungen { padding: 7rem 0; background: var(--gradient-cream); }
 
 .services-grid {
   display: grid;
@@ -411,19 +449,19 @@ h1, h2, h3, h4 {
 .service-num {
   font-family: var(--font-display);
   font-size: 3rem;
-  color: hsl(35 45% 48% / 0.18);
+  color: hsl(340 30% 58% / 0.18);
   line-height: 1;
   margin-bottom: 1rem;
   transition: color 0.3s;
 }
-.service-card:hover .service-num { color: hsl(35 45% 48% / 0.55); }
+.service-card:hover .service-num { color: hsl(340 30% 58% / 0.55); }
 .service-card h3 { font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 0.75rem; }
 .service-card p { font-size: 0.875rem; color: var(--muted-fg); line-height: 1.7; }
 
 /* ============================================================
    TIM
    ============================================================ */
-#tim { padding: 7rem 0; background: var(--cream); }
+#team { padding: 7rem 0; background: var(--cream); }
 
 .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
 .team-card { text-align: center; }
@@ -441,7 +479,7 @@ h1, h2, h3, h4 {
 /* ============================================================
    GALERIJA
    ============================================================ */
-#galerija { padding: 7rem 0; background: var(--gradient-cream); }
+#galerie { padding: 7rem 0; background: var(--gradient-cream); }
 
 .gallery-grid {
   display: grid;
@@ -466,7 +504,7 @@ h1, h2, h3, h4 {
   position: fixed;
   inset: 0;
   z-index: 200;
-  background: hsl(25 20% 14% / 0.95);
+  background: hsl(340 8% 6% / 0.97);
   align-items: center;
   justify-content: center;
   padding: 2rem;
@@ -478,7 +516,7 @@ h1, h2, h3, h4 {
   top: 1.5rem;
   right: 1.5rem;
   background: none;
-  border: 1px solid hsl(36 35% 98% / 0.3);
+  border: 1px solid hsl(0 0% 100% / 0.3);
   color: var(--cream);
   width: 2.75rem;
   height: 2.75rem;
@@ -488,18 +526,16 @@ h1, h2, h3, h4 {
   justify-content: center;
   transition: border-color 0.2s, background 0.2s;
 }
-.lightbox-close:hover { border-color: var(--gold); background: hsl(35 45% 48% / 0.2); }
+.lightbox-close:hover { border-color: var(--gold); background: hsl(340 30% 58% / 0.2); }
 
 /* ============================================================
    RECENZIJE
    ============================================================ */
-#recenzije { padding: 7rem 0; background: var(--cream); }
-
 .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
 .review-card {
   background: var(--card);
   padding: 2.5rem;
-  border: 1px solid hsl(30 18% 85% / 0.6);
+  border: 1px solid hsl(340 18% 88% / 0.6);
   box-shadow: var(--shadow-soft);
 }
 .review-card .quote-icon { width: 2rem; height: 2rem; color: var(--gold); margin-bottom: 1.5rem; }
@@ -508,7 +544,7 @@ h1, h2, h3, h4 {
   font-size: 1.15rem;
   line-height: 1.75;
   font-style: italic;
-  color: hsl(25 20% 14% / 0.88);
+  color: hsl(340 8% 10% / 0.88);
   margin-bottom: 2rem;
 }
 .review-footer {
@@ -543,7 +579,7 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--gold);
-  border-bottom: 1px solid hsl(35 45% 48% / 0.3);
+  border-bottom: 1px solid hsl(340 30% 58% / 0.3);
   padding-bottom: 0.25rem;
   transition: border-color 0.2s;
 }
@@ -552,7 +588,7 @@ h1, h2, h3, h4 {
 /* ============================================================
    RADNO VRIJEME
    ============================================================ */
-#radno-vrijeme { padding: 7rem 0; background: var(--espresso); color: var(--cream); }
+#oeffnungszeiten { padding: 7rem 0; background: var(--espresso); color: var(--cream); }
 
 .hours-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
 
@@ -560,18 +596,18 @@ h1, h2, h3, h4 {
 .hours-intro .eyebrow::before { background: var(--gold-light); }
 .hours-intro h2 { font-size: clamp(1.8rem, 4vw, 2.75rem); color: var(--cream); margin-bottom: 1rem; text-wrap: balance; }
 .hours-intro h2 em { color: var(--gold-light); font-style: italic; }
-.hours-intro p { color: hsl(36 30% 96% / 0.65); line-height: 1.8; max-width: 28rem; }
+.hours-intro p { color: hsl(0 0% 100% / 0.65); line-height: 1.8; max-width: 28rem; }
 
 .hours-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
-  border-bottom: 1px solid hsl(36 35% 98% / 0.1);
+  border-bottom: 1px solid hsl(0 0% 100% / 0.1);
 }
 .hours-row:last-child { border-bottom: none; }
 .hours-row.today {
-  background: hsl(35 45% 48% / 0.12);
+  background: hsl(340 30% 58% / 0.14);
   padding-inline: 0.75rem;
   margin-inline: -0.75rem;
   border-radius: var(--radius);
@@ -579,8 +615,8 @@ h1, h2, h3, h4 {
 }
 .hours-row.today .day-name { color: var(--gold-light); font-weight: 500; }
 .day-name { font-family: var(--font-display); font-size: 1.1rem; }
-.day-time { font-size: 0.85rem; letter-spacing: 0.1em; color: hsl(36 30% 96% / 0.72); }
-.closed { color: hsl(36 30% 96% / 0.35) !important; font-style: italic; }
+.day-time { font-size: 0.85rem; letter-spacing: 0.1em; color: hsl(0 0% 100% / 0.72); }
+.closed { color: hsl(0 0% 100% / 0.35) !important; font-style: italic; }
 
 /* ============================================================
    KONTAKT
@@ -670,17 +706,18 @@ h1, h2, h3, h4 {
 /* ============================================================
    MAPA
    ============================================================ */
-#mapa { background: var(--gradient-cream); padding: 5rem 0; }
+#standort { background: var(--gradient-cream); padding: 5rem 0; }
 .map-header { text-align: center; margin-bottom: 2.5rem; }
 .map-header .eyebrow { justify-content: center; }
 .map-header h2 { font-size: 2.25rem; margin-top: 1rem; }
+.map-address { color: var(--muted-fg); margin-top: 0.5rem; font-size: 0.95rem; }
 .map-wrap { overflow: hidden; box-shadow: var(--shadow-elegant); border: 1px solid var(--border); }
 .map-wrap iframe { display: block; width: 100%; height: 420px; border: none; }
 
 /* ============================================================
    FOOTER
    ============================================================ */
-footer { background: var(--espresso); color: hsl(36 30% 96% / 0.65); padding-top: 4.5rem; padding-bottom: 2rem; }
+footer { background: var(--espresso); color: hsl(0 0% 100% / 0.65); padding-top: 4.5rem; padding-bottom: 2rem; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2.5rem; margin-bottom: 3rem; }
 
 .footer-brand .logo { margin-bottom: 1rem; }
@@ -693,11 +730,11 @@ footer { background: var(--espresso); color: hsl(36 30% 96% / 0.65); padding-top
 .social-links a {
   width: 2.5rem;
   height: 2.5rem;
-  border: 1px solid hsl(36 35% 98% / 0.2);
+  border: 1px solid hsl(0 0% 100% / 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: hsl(36 30% 96% / 0.65);
+  color: hsl(0 0% 100% / 0.65);
   transition: border-color 0.2s, color 0.2s;
 }
 .social-links a:hover { border-color: var(--gold-light); color: var(--gold-light); }
@@ -717,13 +754,13 @@ footer { background: var(--espresso); color: hsl(36 30% 96% / 0.65); padding-top
 
 .footer-bottom {
   padding-top: 2rem;
-  border-top: 1px solid hsl(36 35% 98% / 0.1);
+  border-top: 1px solid hsl(0 0% 100% / 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
   font-size: 0.72rem;
-  color: hsl(36 30% 96% / 0.38);
+  color: hsl(0 0% 100% / 0.38);
   flex-wrap: wrap;
 }
 
@@ -796,7 +833,7 @@ footer { background: var(--espresso); color: hsl(36 30% 96% / 0.65); padding-top
   transition: transform 0.4s var(--ease-smooth);
 }
 #cookie-banner.show { transform: none; }
-#cookie-banner p { color: hsl(36 30% 96% / 0.78); max-width: 52rem; line-height: 1.6; }
+#cookie-banner p { color: hsl(0 0% 100% / 0.78); max-width: 52rem; line-height: 1.6; }
 #cookie-banner a { color: var(--gold-light); text-decoration: underline; }
 .cookie-btns { display: flex; gap: 0.75rem; flex-shrink: 0; }
 .cookie-accept {
@@ -813,8 +850,8 @@ footer { background: var(--espresso); color: hsl(36 30% 96% / 0.65); padding-top
 }
 .cookie-reject {
   background: none;
-  border: 1px solid hsl(36 35% 98% / 0.3);
-  color: hsl(36 30% 96% / 0.65);
+  border: 1px solid hsl(0 0% 100% / 0.3);
+  color: hsl(0 0% 100% / 0.65);
   padding: 0.6rem 1.25rem;
   font-size: 0.72rem;
   text-transform: uppercase;
@@ -867,43 +904,201 @@ footer { background: var(--espresso); color: hsl(36 30% 96% / 0.65); padding-top
 }
 
 /* ============================================================
-   PRELOADER
+   PRELOADER — Logo-faithful premium design
    ============================================================ */
+
 #preloader {
   position: fixed;
   inset: 0;
   z-index: 1000;
-  background: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
-  transition: opacity 0.9s var(--ease-smooth), visibility 0.9s;
-}
-#preloader.hide { opacity: 0; visibility: hidden; pointer-events: none; }
-.preloader-splash {
-  width: min(520px, 88vw);
-  height: auto;
-  border-radius: 1.25rem;
-  animation: fade-up 0.9s var(--ease-smooth) both;
-}
-.preloader-bar-wrap {
-  width: min(520px, 88vw);
-  height: 3px;
-  background: hsl(350, 30%, 91%);
-  border-radius: 99px;
   overflow: hidden;
-  margin-top: 0;
+  transition: opacity 1.1s var(--ease-smooth),
+              visibility 1.1s,
+              transform 1.1s var(--ease-smooth);
 }
-.preloader-bar {
+#preloader.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(1.03);
+}
+
+/* --- Pozadina --- */
+.pl-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 60% 50% at 50% 38%,
+    hsl(338, 75%, 91%) 0%,
+    hsl(338, 55%, 95%) 30%,
+    hsl(0, 0%, 99%)    65%,
+    hsl(0, 0%, 100%)   100%
+  );
+  animation: pl-bg-in 0.6s ease both;
+}
+@keyframes pl-bg-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* --- Kutni okviri --- */
+.pl-corner {
+  position: absolute;
+  width: 3.75rem;
+  height: 3.75rem;
+  color: hsl(334 28% 72% / 0.45);
+  animation: pl-corner-in 0.8s var(--ease-smooth) 0.18s both;
+}
+.pl-corner--tl { top: 1.75rem;    left: 1.75rem;    }
+.pl-corner--tr { top: 1.75rem;    right: 1.75rem;   }
+.pl-corner--bl { bottom: 1.75rem; left: 1.75rem;    }
+.pl-corner--br { bottom: 1.75rem; right: 1.75rem;   }
+.pl-corner svg { width: 100%; height: 100%; display: block; }
+@keyframes pl-corner-in {
+  from { opacity: 0; transform: scale(0.45); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* --- Horizontalni ornamenti --- */
+.pl-orn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  width: min(22rem, 70vw);
+  animation: pl-fade-up 0.7s var(--ease-smooth) 0.25s both;
+}
+.pl-orn--top    { top: 2.2rem; }
+.pl-orn--bottom { bottom: 2.6rem; }
+.pl-orn-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, hsl(334 20% 68% / 0.35), transparent);
+}
+.pl-orn-gem {
+  width: 0.42rem;
+  height: 0.42rem;
+  color: hsl(334 24% 68%);
+  flex-shrink: 0;
+}
+
+/* --- Središnji sadržaj --- */
+.pl-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+  transform: translateY(-3rem);
+}
+
+/* --- Logo mark (zub SVG kontejner) --- */
+.pl-logo-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.2rem;
+  animation: pl-tooth-in 0.85s var(--ease-smooth) 0.25s both;
+}
+
+/* --- Logo slika --- */
+.pl-tooth {
+  width: min(7rem, 24vw);
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 4px 18px hsl(20 10% 14% / 0.10));
+}
+@keyframes pl-tooth-in {
+  from { opacity: 0; transform: translateY(14px) scale(0.88); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* --- Naziv ordinacije --- */
+.pl-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.4rem, 8vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1;
+  color: hsl(20, 10%, 12%);
+  letter-spacing: 0.02em;
+  position: relative;
+  overflow: hidden;
+  animation: pl-brand-in 1s var(--ease-smooth) 0.72s both;
+  margin: 0;
+}
+@keyframes pl-brand-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+/* Sjaj koji prelazi preko naziva */
+.pl-brand::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  left: -70%;
+  width: 55%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    hsl(0 0% 100% / 0.6) 50%,
+    transparent 100%
+  );
+  animation: pl-shimmer 2.4s var(--ease-smooth) 1.8s infinite;
+  pointer-events: none;
+}
+@keyframes pl-shimmer {
+  from { left: -70%; }
+  to   { left: 120%; }
+}
+
+/* --- Podnaslov --- */
+.pl-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.55rem, 1.5vw, 0.7rem);
+  font-weight: 500;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: hsl(20, 8%, 38%);
+  animation: pl-fade-up 0.6s ease 1.1s both;
+}
+
+@keyframes pl-fade-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Traka napretka --- */
+.pl-bar-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: hsl(334 28% 76% / 0.25);
+  z-index: 2;
+}
+.pl-bar {
   height: 100%;
   width: 0%;
-  border-radius: 99px;
-  background: linear-gradient(90deg, hsl(350, 20%, 95%), hsl(350, 22%, 93%) 70%, hsl(350, 42%, 74%) 85%, hsl(340, 52%, 62%) 100%);
-  animation: bar-fill 1.5s cubic-bezier(0.4, 0, 0.15, 1) 0.2s both;
+  background: linear-gradient(
+    90deg,
+    hsl(338, 55%, 80%) 0%,
+    hsl(335, 44%, 57%) 45%,
+    hsl(25,  50%, 58%) 75%,
+    hsl(38,  70%, 62%) 100%
+  );
+  animation: pl-bar-fill 1.8s cubic-bezier(0.4, 0, 0.15, 1) 0.12s both;
+  box-shadow: 0 0 10px hsl(335 44% 57% / 0.45);
 }
-@keyframes bar-fill {
+@keyframes pl-bar-fill {
   from { width: 0%; }
   to   { width: 100%; }
 }
@@ -916,8 +1111,8 @@ footer { background: var(--espresso); color: hsl(36 30% 96% / 0.65); padding-top
   overflow: hidden;
   background: var(--espresso);
   padding: 1.1rem 0;
-  border-top: 1px solid hsl(36 35% 98% / 0.06);
-  border-bottom: 1px solid hsl(36 35% 98% / 0.06);
+  border-top: 1px solid hsl(0 0% 100% / 0.08);
+  border-bottom: 1px solid hsl(0 0% 100% / 0.08);
   user-select: none;
 }
 .marquee-track {
@@ -933,7 +1128,7 @@ footer { background: var(--espresso); color: hsl(36 30% 96% / 0.65); padding-top
   padding-inline: 2.5rem;
   font-family: var(--font-display);
   font-size: 1.05rem;
-  color: hsl(36 30% 96% / 0.45);
+  color: hsl(0 0% 100% / 0.50);
   white-space: nowrap;
   letter-spacing: 0.03em;
 }
@@ -956,7 +1151,7 @@ footer { background: var(--espresso); color: hsl(36 30% 96% / 0.65); padding-top
 .gallery-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, hsl(25 20% 14% / 0.78) 0%, transparent 55%);
+  background: linear-gradient(to top, hsl(340 10% 8% / 0.80) 0%, transparent 55%);
   display: flex;
   align-items: flex-end;
   padding: 1.25rem;
@@ -965,7 +1160,7 @@ footer { background: var(--espresso); color: hsl(36 30% 96% / 0.65); padding-top
 }
 .gallery-item:hover .gallery-overlay { opacity: 1; }
 .gallery-overlay span {
-  color: hsl(36 35% 98% / 0.9);
+  color: hsl(0 0% 100% / 0.92);
   font-family: var(--font-display);
   font-size: 1rem;
   letter-spacing: 0.04em;
@@ -1017,21 +1212,21 @@ footer { background: var(--espresso); color: hsl(36 30% 96% / 0.65); padding-top
 .stat-num.counting { color: var(--gold); }
 
 /* ============================================================
-   MARQUEE — override u subtilne krem boje
+   MARQUEE — override u roza/bijele boje
    ============================================================ */
 .marquee-strip {
-  background: hsl(32, 18%, 91%);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  background: var(--espresso);
+  border-top: none;
+  border-bottom: none;
   padding: 0.85rem 0;
 }
 .marquee-item {
-  color: hsl(25, 12%, 42%, 0.45);
+  color: hsl(0 0% 100% / 0.55);
   font-size: 0.95rem;
   letter-spacing: 0.04em;
 }
-.marquee-item em { color: hsl(35, 38%, 44%); }
-.marquee-dot { background: hsl(35, 38%, 60%); }
+.marquee-item em { color: var(--gold-light); }
+.marquee-dot { background: hsl(340 30% 58% / 0.5); }
 
 /* ============================================================
    USLUGE — novi split layout (foto + 2-col grid)
@@ -1062,7 +1257,7 @@ footer { background: var(--espresso); color: hsl(36 30% 96% / 0.65); padding-top
   bottom: 0;
   inset-inline: 0;
   padding: 2rem 1.75rem;
-  background: linear-gradient(to top, hsl(25 20% 10% / 0.82) 0%, transparent 100%);
+  background: linear-gradient(to top, hsl(340 10% 8% / 0.85) 0%, transparent 100%);
 }
 .services-photo-caption .eyebrow {
   color: var(--gold-light);
@@ -1074,7 +1269,7 @@ footer { background: var(--espresso); color: hsl(36 30% 96% / 0.65); padding-top
   font-family: var(--font-display);
   font-size: 1.25rem;
   font-style: italic;
-  color: hsl(36 30% 96% / 0.88);
+  color: hsl(0 0% 100% / 0.90);
   line-height: 1.4;
 }
 
@@ -1109,25 +1304,23 @@ footer { background: var(--espresso); color: hsl(36 30% 96% / 0.65); padding-top
    Tamnija:   --cream-b hsl(33,22%,89%)
    Akcent:    --espresso (Radno vrijeme, Footer)
    ============================================================ */
-:root { --cream-b: hsl(33, 22%, 89%); }
+:root { --cream-b: hsl(340, 15%, 97%); }
 
-#o-nama          { background: var(--cream);   }
-#usluge          { background: var(--cream-b); }
-#galerija        { background: var(--cream);   }
-#recenzije       { background: var(--cream-b); }
-#radno-vrijeme   { background: var(--espresso); }   /* tamna — ostaje */
-#kontakt         { background: var(--cream);   }
-#mapa            { background: var(--cream-b); padding: 4.5rem 0; }
-footer           { background: var(--espresso); }   /* tamna — ostaje */
+#ueber-uns       { background: var(--cream);   }
+#leistungen      { background: var(--cream-b); }
+#galerie         { background: var(--cream);   }
+#oeffnungszeiten { background: var(--espresso); }
+#kontakt         { background: var(--cream-b); }
+#standort        { background: var(--cream); padding: 4.5rem 0; }
+footer           { background: var(--espresso); }
 
-/* Marquee između hero i o-nama → uskladi s cream-b */
-.marquee-strip   { background: var(--cream-b); }
+.marquee-strip   { background: var(--espresso); }
 
 /* ============================================================
    USLUGE — kompaktnije vertikalno
    ============================================================ */
-#usluge { padding: 4.5rem 0; }
-#usluge .section-header { margin-bottom: 2.25rem; }
+#leistungen { padding: 4.5rem 0; }
+#leistungen .section-header { margin-bottom: 2.25rem; }
 
 .services-photo  { min-height: 300px; }
 
@@ -1155,9 +1348,9 @@ footer           { background: var(--espresso); }   /* tamna — ostaje */
 /* ============================================================
    MARQUEE — čitljiviji tekst (fix kontrast)
    ============================================================ */
-.marquee-item      { color: hsl(25, 15%, 32%); }
-.marquee-item em   { color: var(--gold); }
-.marquee-dot       { background: hsl(35, 38%, 52% / 0.5); }
+.marquee-item      { color: hsl(0 0% 100% / 0.55); }
+.marquee-item em   { color: var(--gold-light); }
+.marquee-dot       { background: hsl(340 30% 58% / 0.5); }
 
 
 /* ============================================================
@@ -1168,7 +1361,7 @@ footer           { background: var(--espresso); }   /* tamna — ostaje */
   width: 100%;
   aspect-ratio: 4/5;
   background: var(--cream-b);
-  border: 1.5px dashed hsl(35 45% 48% / 0.45);
+  border: 1.5px dashed hsl(340 30% 58% / 0.45);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1187,8 +1380,8 @@ footer           { background: var(--espresso); }   /* tamna — ostaje */
     -45deg,
     transparent,
     transparent 18px,
-    hsl(35 45% 48% / 0.04) 18px,
-    hsl(35 45% 48% / 0.04) 19px
+    hsl(340 30% 58% / 0.04) 18px,
+    hsl(340 30% 58% / 0.04) 19px
   );
   pointer-events: none;
 }

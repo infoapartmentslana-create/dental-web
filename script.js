@@ -1,5 +1,5 @@
 /* ============================================================
-   script.js — Dentalis stomatološka ordinacija
+   script.js — Zahnordination Zahnaesthetika, Salzburg
    ============================================================ */
 
 /* --- Navbar scroll efekt + scroll-to-top gumb --- */
@@ -81,24 +81,24 @@ if (contactForm) {
     e.preventDefault();
 
     if (!document.getElementById('gdpr').checked) {
-      showToast('Molimo prihvatite uvjete obrade osobnih podataka.', 'error');
+      showToast('Bitte akzeptieren Sie die Datenschutzerklärung.', 'error');
       return;
     }
 
-    /* Provjeri je li Formspree konfiguriran */
+    /* Prüfen ob Formspree konfiguriert ist */
     if (contactForm.action.includes('ZAMIJENI_S_TVOJIM_KODOM')) {
-      /* Fallback: otvori mailto link ako Formspree nije postavljen */
+      /* Fallback: mailto öffnen wenn Formspree nicht eingerichtet ist */
       const name    = document.getElementById('cf-name').value;
       const email   = document.getElementById('cf-email').value;
       const phone   = document.getElementById('cf-phone').value;
       const message = document.getElementById('cf-message').value;
-      const body    = `Ime: ${name}\nEmail: ${email}\nTelefon: ${phone}\n\nPoruka:\n${message}`;
-      window.location.href = `mailto:info@dentalis.hr?subject=Upit s web stranice — ${name}&body=${encodeURIComponent(body)}`;
+      const body    = `Name: ${name}\nE-Mail: ${email}\nTelefon: ${phone}\n\nNachricht:\n${message}`;
+      window.location.href = `mailto:info@zahnaesthetika.at?subject=Anfrage über die Website von ${name}&body=${encodeURIComponent(body)}`;
       return;
     }
 
     submitBtn.disabled = true;
-    submitBtn.textContent = 'Slanje…';
+    submitBtn.textContent = 'Wird gesendet…';
 
     try {
       const res = await fetch(contactForm.action, {
@@ -108,16 +108,16 @@ if (contactForm) {
       });
 
       if (res.ok) {
-        showToast('Hvala! Javit ćemo vam se u najkraćem roku.');
+        showToast('Vielen Dank! Wir melden uns so bald wie möglich.');
         contactForm.reset();
       } else {
-        showToast('Greška pri slanju. Molimo kontaktirajte nas telefonom.', 'error');
+        showToast('Fehler beim Senden. Bitte kontaktieren Sie uns telefonisch.', 'error');
       }
     } catch {
-      showToast('Greška pri slanju. Molimo kontaktirajte nas telefonom.', 'error');
+      showToast('Fehler beim Senden. Bitte kontaktieren Sie uns telefonisch.', 'error');
     } finally {
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Pošalji upit';
+      submitBtn.textContent = 'Anfrage senden';
     }
   });
 }
@@ -163,8 +163,8 @@ const hidePreloader = () => {
     preloader.classList.add('hide');
   }
 };
-document.addEventListener('DOMContentLoaded', () => setTimeout(hidePreloader, 1800));
-setTimeout(hidePreloader, 4000);
+document.addEventListener('DOMContentLoaded', () => setTimeout(hidePreloader, 2100));
+setTimeout(hidePreloader, 5000);
 
 
 /* ============================================================

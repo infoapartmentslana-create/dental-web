@@ -9,7 +9,9 @@
       "Bash(python -c \"from PIL import Image; print\\('PIL ok'\\)\")",
       "Bash(magick --version)",
       "Bash(convert --version)",
-      "Bash(node -e \"require\\('sharp'\\); console.log\\('sharp ok'\\)\")"
+      "Bash(node -e \"require\\('sharp'\\); console.log\\('sharp ok'\\)\")",
+      "Bash(rm -rf src/ public/)",
+      "Bash(rm -f package.json package-lock.json bun.lock bun.lockb components.json eslint.config.js postcss.config.js tailwind.config.ts tsconfig.app.json tsconfig.json tsconfig.node.json vite.config.ts vitest.config.ts README.md)"
     ]
   }
 }
