@@ -136,10 +136,22 @@
 
 <!-- HERO -->
 <section id="hero">
-  <video autoplay muted loop playsinline poster="assets/hero-poster.jpg">
-    <source src="assets/hero.mp4" type="video/mp4" />
-  </video>
+  <div class="hero-cs-bg" aria-hidden="true"></div>
   <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-cs-watermark" aria-hidden="true">
+    <div class="hero-cs-orn">
+      <span class="cs-line-h"></span>
+      <svg viewBox="0 0 10 10" fill="currentColor" class="cs-gem"><polygon points="5,0 10,5 5,10 0,5"/></svg>
+      <span class="cs-line-h"></span>
+    </div>
+    <p class="hero-cs-text">Demnächst</p>
+    <p class="hero-cs-sub">B A L D &nbsp;&nbsp; V E R F Ü G B A R</p>
+    <div class="hero-cs-orn">
+      <span class="cs-line-h"></span>
+      <svg viewBox="0 0 10 10" fill="currentColor" class="cs-gem"><polygon points="5,0 10,5 5,10 0,5"/></svg>
+      <span class="cs-line-h"></span>
+    </div>
+  </div>
   <div class="hero-content">
     <div class="hero-glass">
       <p class="eyebrow">Zahnordination · Salzburg</p>
@@ -190,14 +202,20 @@
         <!-- Wenn Sie ein Foto haben, ersetzen Sie den Platzhalter durch:
              <img src="assets/doctor.jpg" alt="Zahnärztin der Praxis" loading="lazy" /> -->
         <div class="photo-placeholder" aria-hidden="true">
-          <svg class="placeholder-silhouette" viewBox="0 0 120 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="60" cy="52" r="28" fill="currentColor" opacity="0.18"/>
-            <path d="M4 156 C4 112 116 112 116 156" fill="currentColor" opacity="0.12"/>
-            <circle cx="60" cy="52" r="28" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
-            <path d="M6 154 C6 114 114 114 114 154" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
-          </svg>
-          <p class="placeholder-title">Ihr Foto hier</p>
-          <span class="placeholder-note">Ersetzen Sie dies durch ein echtes Foto</span>
+          <div class="cs-content">
+            <div class="cs-ornament">
+              <span class="cs-line-h"></span>
+              <svg viewBox="0 0 10 10" fill="currentColor" class="cs-gem"><polygon points="5,0 10,5 5,10 0,5"/></svg>
+              <span class="cs-line-h"></span>
+            </div>
+            <p class="cs-title">Demnächst</p>
+            <p class="cs-sub">B A L D &nbsp;&nbsp; V E R F Ü G B A R</p>
+            <div class="cs-ornament">
+              <span class="cs-line-h"></span>
+              <svg viewBox="0 0 10 10" fill="currentColor" class="cs-gem"><polygon points="5,0 10,5 5,10 0,5"/></svg>
+              <span class="cs-line-h"></span>
+            </div>
+          </div>
           <span class="ph-corner ph-tl"></span>
           <span class="ph-corner ph-tr"></span>
           <span class="ph-corner ph-bl"></span>
@@ -219,7 +237,7 @@
 
         <div class="about-stats">
           <div>
-            <div class="stat-num" data-target="15" data-suffix="+">15+</div>
+            <div class="stat-num" data-target="10" data-suffix="+">10+</div>
             <div class="stat-label">Jahre Erfahrung</div>
           </div>
           <div>
@@ -249,7 +267,22 @@
     <div class="services-split reveal">
 
       <div class="services-photo">
-        <img src="assets/gallery-2.jpg" alt="Moderne Zahnarztpraxis" loading="lazy" />
+        <div class="img-cs img-cs--mid" aria-hidden="true">
+          <div class="cs-content">
+            <div class="cs-ornament">
+              <span class="cs-line-h"></span>
+              <svg viewBox="0 0 10 10" fill="currentColor" class="cs-gem"><polygon points="5,0 10,5 5,10 0,5"/></svg>
+              <span class="cs-line-h"></span>
+            </div>
+            <p class="cs-title">Demnächst</p>
+            <p class="cs-sub">B A L D &nbsp;&nbsp; V E R F Ü G B A R</p>
+            <div class="cs-ornament">
+              <span class="cs-line-h"></span>
+              <svg viewBox="0 0 10 10" fill="currentColor" class="cs-gem"><polygon points="5,0 10,5 5,10 0,5"/></svg>
+              <span class="cs-line-h"></span>
+            </div>
+          </div>
+        </div>
         <div class="services-photo-caption">
           <p class="eyebrow">Alles aus einer Hand</p>
           <p>Modernste Technologie für Ihr Lächeln.</p>
@@ -349,22 +382,82 @@
     <div class="gallery-grid reveal">
 
       <div class="gallery-item" tabindex="0" role="button" aria-label="Bild vergrößern: Empfang">
-        <img src="assets/gallery-1.jpg" alt="Empfang der Praxis" loading="lazy" />
+        <div class="img-cs img-cs--light" aria-hidden="true">
+          <div class="cs-content">
+            <div class="cs-ornament">
+              <span class="cs-line-h"></span>
+              <svg viewBox="0 0 10 10" fill="currentColor" class="cs-gem"><polygon points="5,0 10,5 5,10 0,5"/></svg>
+              <span class="cs-line-h"></span>
+            </div>
+            <p class="cs-title">Demnächst</p>
+            <p class="cs-sub">B A L D &nbsp;&nbsp; V E R F Ü G B A R</p>
+            <div class="cs-ornament">
+              <span class="cs-line-h"></span>
+              <svg viewBox="0 0 10 10" fill="currentColor" class="cs-gem"><polygon points="5,0 10,5 5,10 0,5"/></svg>
+              <span class="cs-line-h"></span>
+            </div>
+          </div>
+        </div>
         <div class="gallery-overlay"><span>Empfang</span></div>
       </div>
 
       <div class="gallery-item" tabindex="0" role="button" aria-label="Bild vergrößern: Behandlungsraum">
-        <img src="assets/gallery-2.jpg" alt="Behandlungsraum" loading="lazy" />
+        <div class="img-cs img-cs--mid" aria-hidden="true">
+          <div class="cs-content">
+            <div class="cs-ornament">
+              <span class="cs-line-h"></span>
+              <svg viewBox="0 0 10 10" fill="currentColor" class="cs-gem"><polygon points="5,0 10,5 5,10 0,5"/></svg>
+              <span class="cs-line-h"></span>
+            </div>
+            <p class="cs-title">Demnächst</p>
+            <p class="cs-sub">B A L D &nbsp;&nbsp; V E R F Ü G B A R</p>
+            <div class="cs-ornament">
+              <span class="cs-line-h"></span>
+              <svg viewBox="0 0 10 10" fill="currentColor" class="cs-gem"><polygon points="5,0 10,5 5,10 0,5"/></svg>
+              <span class="cs-line-h"></span>
+            </div>
+          </div>
+        </div>
         <div class="gallery-overlay"><span>Behandlungsraum</span></div>
       </div>
 
       <div class="gallery-item" tabindex="0" role="button" aria-label="Bild vergrößern: Dentalgeräte">
-        <img src="assets/gallery-3.jpg" alt="Dentalgeräte" loading="lazy" />
+        <div class="img-cs img-cs--light" aria-hidden="true">
+          <div class="cs-content">
+            <div class="cs-ornament">
+              <span class="cs-line-h"></span>
+              <svg viewBox="0 0 10 10" fill="currentColor" class="cs-gem"><polygon points="5,0 10,5 5,10 0,5"/></svg>
+              <span class="cs-line-h"></span>
+            </div>
+            <p class="cs-title">Demnächst</p>
+            <p class="cs-sub">B A L D &nbsp;&nbsp; V E R F Ü G B A R</p>
+            <div class="cs-ornament">
+              <span class="cs-line-h"></span>
+              <svg viewBox="0 0 10 10" fill="currentColor" class="cs-gem"><polygon points="5,0 10,5 5,10 0,5"/></svg>
+              <span class="cs-line-h"></span>
+            </div>
+          </div>
+        </div>
         <div class="gallery-overlay"><span>Dentalgeräte</span></div>
       </div>
 
       <div class="gallery-item" tabindex="0" role="button" aria-label="Bild vergrößern: Wartebereich">
-        <img src="assets/gallery-4.jpg" alt="Wartebereich" loading="lazy" />
+        <div class="img-cs img-cs--mid" aria-hidden="true">
+          <div class="cs-content">
+            <div class="cs-ornament">
+              <span class="cs-line-h"></span>
+              <svg viewBox="0 0 10 10" fill="currentColor" class="cs-gem"><polygon points="5,0 10,5 5,10 0,5"/></svg>
+              <span class="cs-line-h"></span>
+            </div>
+            <p class="cs-title">Demnächst</p>
+            <p class="cs-sub">B A L D &nbsp;&nbsp; V E R F Ü G B A R</p>
+            <div class="cs-ornament">
+              <span class="cs-line-h"></span>
+              <svg viewBox="0 0 10 10" fill="currentColor" class="cs-gem"><polygon points="5,0 10,5 5,10 0,5"/></svg>
+              <span class="cs-line-h"></span>
+            </div>
+          </div>
+        </div>
         <div class="gallery-overlay"><span>Wartebereich</span></div>
       </div>
 
@@ -449,7 +542,7 @@
           </div>
         </a>
 
-        <a href="#" class="contact-item">
+        <a href="mailto:info@zahnaesthetika.at" class="contact-item">
           <div class="contact-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
@@ -458,7 +551,7 @@
           </div>
           <div>
             <div class="contact-label">E-Mail</div>
-            <div class="contact-value">Wird bald bekannt gegeben</div>
+            <div class="contact-value">info@zahnaesthetika.at</div>
           </div>
         </a>
 
@@ -480,37 +573,48 @@
       <form
         class="contact-form"
         id="contact-form"
-        action="https://formspree.io/f/ZAMIJENI_S_TVOJIM_KODOM"
+        action="https://api.web3forms.com/submit"
         method="POST"
         novalidate
       >
+        <input type="hidden" name="access_key" value="186e81d0-aa38-420b-8af5-27281f2a5576" />
+        <input type="hidden" name="subject" value="Neue Anfrage — Zahnaesthetika Website" />
+        <input type="checkbox" name="botcheck" style="display:none" />
         <div class="form-group">
-          <label for="cf-name">Vor- und Nachname *</label>
+          <label for="cf-name">Vor- und Nachname</label>
           <input type="text" id="cf-name" name="name" required maxlength="100" autocomplete="name" />
+          <span class="field-err">Dieses Feld ist erforderlich.</span>
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label for="cf-email">E-Mail *</label>
+            <label for="cf-email">E-Mail</label>
             <input type="email" id="cf-email" name="email" required maxlength="255" autocomplete="email" />
+            <span class="field-err">Dieses Feld ist erforderlich.</span>
           </div>
           <div class="form-group">
             <label for="cf-phone">Telefon</label>
-            <input type="tel" id="cf-phone" name="phone" maxlength="30" autocomplete="tel" />
+            <input type="tel" id="cf-phone" name="phone" required maxlength="30" autocomplete="tel" />
+            <span class="field-err">Dieses Feld ist erforderlich.</span>
           </div>
         </div>
 
         <div class="form-group">
-          <label for="cf-message">Nachricht *</label>
+          <label for="cf-message">Nachricht</label>
           <textarea id="cf-message" name="message" rows="4" required maxlength="1000"></textarea>
+          <span class="field-err">Dieses Feld ist erforderlich.</span>
         </div>
 
-        <label class="gdpr-label">
-          <input type="checkbox" id="gdpr" name="gdpr" required />
-          <span>Ich stimme der Verarbeitung meiner personenbezogenen Daten zur Beantwortung meiner Anfrage zu (DSGVO).</span>
-        </label>
+        <div class="form-group-gdpr">
+          <label class="gdpr-label">
+            <input type="checkbox" id="gdpr" name="gdpr" required />
+            <span>Ich stimme der Verarbeitung meiner personenbezogenen Daten zur Beantwortung meiner Anfrage zu (DSGVO).</span>
+          </label>
+          <span class="field-err">Bitte akzeptieren Sie die Datenschutzerklärung.</span>
+        </div>
 
         <button type="submit" class="btn-submit" id="submit-btn">Anfrage senden</button>
+        <p class="submit-err" id="submit-err" aria-live="polite">Bitte füllen Sie alle Pflichtfelder aus und akzeptieren Sie die Datenschutzerklärung.</p>
       </form>
 
     </div>
@@ -551,18 +655,18 @@
         </a>
         <p>Ihre moderne Zahnarztpraxis in Salzburg, wo Zahnmedizin auf Kunst trifft. Unser Ziel: Ihr Lächeln in besten Händen.</p>
         <div class="social-links">
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <span class="social-placeholder" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
               <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
               <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
             </svg>
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          </span>
+          <span class="social-placeholder" aria-label="Facebook">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
               <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
             </svg>
-          </a>
+          </span>
         </div>
       </div>
 
@@ -572,16 +676,16 @@
           <li>Nonntaler Hauptstraße 49</li>
           <li>5020 Salzburg, Österreich</li>
           <li>Tel: wird bald bekannt gegeben</li>
-          <li>E-Mail: wird bald bekannt gegeben</li>
+          <li>E-Mail: info@zahnaesthetika.at</li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Rechtliches</h4>
         <ul>
-          <li><a href="#">Datenschutzerklärung</a></li>
-          <li><a href="#">Impressum</a></li>
-          <li><a href="#">Cookie-Richtlinie</a></li>
+          <li><a href="#" class="legal-trigger" data-legal="datenschutz">Datenschutzerklärung</a></li>
+          <li><a href="#" class="legal-trigger" data-legal="impressum">Impressum</a></li>
+          <li><a href="#" class="legal-trigger" data-legal="cookie">Cookie-Richtlinie</a></li>
         </ul>
       </div>
 
@@ -608,13 +712,228 @@
 <div id="cookie-banner" role="dialog" aria-label="Cookie-Hinweis">
   <p>
     Wir verwenden Cookies, um Ihr Erlebnis auf unserer Website zu verbessern.
-    Weitere Informationen finden Sie in unserer <a href="#">Datenschutzerklärung</a>.
+    Weitere Informationen finden Sie in unserer <a href="#" class="legal-trigger" data-legal="datenschutz">Datenschutzerklärung</a>.
   </p>
   <div class="cookie-btns">
     <button class="cookie-accept" id="cookie-accept">Alle akzeptieren</button>
     <button class="cookie-reject" id="cookie-reject">Nur notwendige</button>
   </div>
 </div>
+
+<!-- ============================================================
+     MODAL: IMPRESSUM
+     ============================================================ -->
+<div class="legal-modal" id="modal-impressum" role="dialog" aria-modal="true" aria-labelledby="title-impressum">
+  <div class="legal-modal-box">
+    <div class="legal-modal-header">
+      <div>
+        <p class="eyebrow">Rechtliches</p>
+        <h2 id="title-impressum">Impressum</h2>
+      </div>
+      <button class="legal-modal-close" aria-label="Schließen">&#x2715;</button>
+    </div>
+    <div class="legal-modal-body">
+
+      <h3>Angaben gemäß § 5 ECG und § 25 MedienG</h3>
+
+      <h3>Medieninhaber &amp; Betreiber</h3>
+      <p>
+        <span class="fill-in">⚠ Vollständiger Name der Zahnärztin — bitte ergänzen</span><br>
+        Zahnordination Zahnaesthetika<br>
+        Nonntaler Hauptstraße 49<br>
+        5020 Salzburg, Österreich
+      </p>
+
+      <h3>Kontakt</h3>
+      <p>
+        Telefon: <span class="fill-in">⚠ Telefonnummer — bitte ergänzen</span><br>
+        E-Mail: <a href="mailto:info@zahnaesthetika.at">info@zahnaesthetika.at</a><br>
+        Website: zahnaesthetika.at
+      </p>
+
+      <h3>Berufsrechtliche Angaben</h3>
+      <p>
+        Berufsbezeichnung: Zahnärztin<br>
+        Verleihungsstaat: Österreich<br>
+        Berufsvertretung: Österreichische Zahnärztekammer,<br>
+        Landeszahnärztekammer Salzburg<br>
+        Kammermitgliedsnummer: <span class="fill-in">⚠ Kammernummer — bitte ergänzen</span>
+      </p>
+
+      <h3>Unternehmensrechtliche Angaben</h3>
+      <p>
+        UID-Nummer: <span class="fill-in">⚠ UID-Nummer — bitte ergänzen (falls vorhanden)</span>
+      </p>
+
+      <h3>Aufsichtsbehörde</h3>
+      <p>
+        Österreichische Zahnärztekammer<br>
+        Kohlmarkt 11/6, 1010 Wien<br>
+        <a href="https://www.zahnaerztekammer.at" target="_blank" rel="noopener">www.zahnaerztekammer.at</a>
+      </p>
+
+      <h3>Anwendbare Rechtsvorschriften</h3>
+      <p>
+        Zahnärztegesetz (ZÄG), Ärztegesetz 1998<br>
+        Einsehbar unter: <a href="https://www.ris.bka.gv.at" target="_blank" rel="noopener">www.ris.bka.gv.at</a>
+      </p>
+
+      <h3>Haftungsausschluss</h3>
+      <p>Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+
+      <h3>Urheberrecht</h3>
+      <p>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf dieser Website unterliegen dem österreichischen Urheberrecht. Die Vervielfältigung, Bearbeitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung.</p>
+
+    </div>
+    <div class="legal-modal-footer">
+      <button class="legal-modal-close-btn">Schließen</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     MODAL: DATENSCHUTZERKLÄRUNG
+     ============================================================ -->
+<div class="legal-modal" id="modal-datenschutz" role="dialog" aria-modal="true" aria-labelledby="title-datenschutz">
+  <div class="legal-modal-box">
+    <div class="legal-modal-header">
+      <div>
+        <p class="eyebrow">Rechtliches</p>
+        <h2 id="title-datenschutz">Datenschutzerklärung</h2>
+      </div>
+      <button class="legal-modal-close" aria-label="Schließen">&#x2715;</button>
+    </div>
+    <div class="legal-modal-body">
+
+      <h3>1. Verantwortlicher</h3>
+      <p>
+        Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br><br>
+        <span class="fill-in">⚠ Vollständiger Name der Zahnärztin — bitte ergänzen</span><br>
+        Zahnordination Zahnaesthetika<br>
+        Nonntaler Hauptstraße 49, 5020 Salzburg<br>
+        E-Mail: <a href="mailto:info@zahnaesthetika.at">info@zahnaesthetika.at</a><br>
+        Telefon: <span class="fill-in">⚠ Telefonnummer — bitte ergänzen</span>
+      </p>
+
+      <h3>2. Erhebung personenbezogener Daten</h3>
+      <p>Wir erheben personenbezogene Daten nur, wenn Sie uns diese aktiv mitteilen, z. B. durch das Ausfüllen des Kontaktformulars. Beim bloßen Besuch unserer Website werden keine personenbezogenen Daten automatisch gespeichert.</p>
+
+      <h3>3. Kontaktformular</h3>
+      <p>Wenn Sie unser Kontaktformular nutzen, werden folgende Daten erhoben:</p>
+      <ul class="legal-list">
+        <li>Vor- und Nachname</li>
+        <li>E-Mail-Adresse</li>
+        <li>Telefonnummer</li>
+        <li>Nachricht / Anfrage</li>
+      </ul>
+      <p>Diese Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet. Die Übermittlung erfolgt verschlüsselt über den Dienst <strong>Web3Forms</strong> (<a href="https://web3forms.com/privacy" target="_blank" rel="noopener">Datenschutzerklärung Web3Forms</a>). Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) bzw. lit. f (berechtigtes Interesse).</p>
+      <p>Ihre Daten werden nicht an Dritte weitergegeben und nach Abschluss der Bearbeitung Ihrer Anfrage gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.</p>
+
+      <h3>4. Hosting</h3>
+      <p>
+        Diese Website wird gehostet bei:<br>
+        <span class="fill-in">⚠ Name des Hosting-Anbieters — bitte ergänzen (z. B. Hetzner, Netlify, Strato …)</span><br>
+        <span class="fill-in">⚠ Adresse des Hosting-Anbieters — bitte ergänzen</span>
+      </p>
+      <p>Die Verarbeitung der Serverdaten (IP-Adresse, Zugriffszeit, aufgerufene Seiten) erfolgt auf Basis von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am Betrieb der Website).</p>
+
+      <h3>5. Cookies &amp; lokaler Speicher</h3>
+      <p>Unsere Website verwendet ausschließlich technisch notwendige Speichermechanismen (localStorage), um Ihre Cookie-Einstellung zu speichern. Es werden keine Tracking- oder Marketing-Cookies eingesetzt. Weitere Details entnehmen Sie unserer <button class="legal-inline-link" onclick="switchLegalModal('modal-cookie')">Cookie-Richtlinie</button>.</p>
+
+      <h3>6. Ihre Rechte (DSGVO)</h3>
+      <ul class="legal-list">
+        <li><strong>Auskunftsrecht</strong> — Art. 15 DSGVO</li>
+        <li><strong>Recht auf Berichtigung</strong> — Art. 16 DSGVO</li>
+        <li><strong>Recht auf Löschung</strong> — Art. 17 DSGVO</li>
+        <li><strong>Recht auf Einschränkung der Verarbeitung</strong> — Art. 18 DSGVO</li>
+        <li><strong>Recht auf Datenübertragbarkeit</strong> — Art. 20 DSGVO</li>
+        <li><strong>Widerspruchsrecht</strong> — Art. 21 DSGVO</li>
+      </ul>
+      <p>Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: <a href="mailto:info@zahnaesthetika.at">info@zahnaesthetika.at</a></p>
+
+      <h3>7. Beschwerderecht</h3>
+      <p>
+        Sie haben das Recht, bei der österreichischen Datenschutzbehörde Beschwerde einzulegen:<br><br>
+        Österreichische Datenschutzbehörde<br>
+        Barichgasse 40–42, 1030 Wien<br>
+        <a href="https://www.dsb.gv.at" target="_blank" rel="noopener">www.dsb.gv.at</a>
+      </p>
+
+      <h3>8. Aktualität</h3>
+      <p>Diese Datenschutzerklärung wurde zuletzt aktualisiert am: <span class="fill-in">⚠ Datum eintragen — z. B. Mai 2026</span></p>
+
+    </div>
+    <div class="legal-modal-footer">
+      <button class="legal-modal-close-btn">Schließen</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     MODAL: COOKIE-RICHTLINIE
+     ============================================================ -->
+<div class="legal-modal" id="modal-cookie" role="dialog" aria-modal="true" aria-labelledby="title-cookie">
+  <div class="legal-modal-box">
+    <div class="legal-modal-header">
+      <div>
+        <p class="eyebrow">Rechtliches</p>
+        <h2 id="title-cookie">Cookie-Richtlinie</h2>
+      </div>
+      <button class="legal-modal-close" aria-label="Schließen">&#x2715;</button>
+    </div>
+    <div class="legal-modal-body">
+
+      <h3>Was sind Cookies?</h3>
+      <p>Cookies sind kleine Textdateien, die beim Besuch einer Website auf Ihrem Gerät gespeichert werden. Unsere Website verwendet ausschließlich technisch notwendige Speichermechanismen.</p>
+
+      <h3>Welche Cookies verwenden wir?</h3>
+      <p>Wir setzen <strong>ausschließlich technisch notwendige</strong> Speichermechanismen ein — keine Tracking- oder Marketing-Cookies.</p>
+
+      <table class="cookie-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Zweck</th>
+            <th>Speicherdauer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>cookie-consent</code></td>
+            <td>Speichert Ihre Cookie-Einstellung (akzeptiert / nur notwendige)</td>
+            <td>Dauerhaft (localStorage)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Keine Tracking-Cookies</h3>
+      <p>Wir verwenden <strong>keine</strong> Analyse-, Tracking- oder Marketing-Cookies. Es werden keine Daten durch Drittanbieter wie Google Analytics, Facebook Pixel o. Ä. erfasst.</p>
+
+      <h3>Cookies verwalten oder löschen</h3>
+      <p>Sie können Cookies und den lokalen Speicher Ihres Browsers jederzeit löschen. Anleitungen:</p>
+      <ul class="legal-list">
+        <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
+        <li><a href="https://support.mozilla.org/de/kb/cookies-erlauben-und-ablehnen" target="_blank" rel="noopener">Mozilla Firefox</a></li>
+        <li><a href="https://support.apple.com/de-de/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Apple Safari</a></li>
+        <li><a href="https://support.microsoft.com/de-de/microsoft-edge/cookies-in-microsoft-edge-l%C3%B6schen-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener">Microsoft Edge</a></li>
+      </ul>
+      <p>Bitte beachten Sie, dass das Löschen des lokalen Speichers dazu führt, dass Ihre Cookie-Einstellung auf unserer Website zurückgesetzt wird.</p>
+
+      <h3>Web3Forms</h3>
+      <p>Beim Absenden des Kontaktformulars werden Ihre Daten an <strong>Web3Forms</strong> übertragen. Weitere Informationen: <a href="https://web3forms.com/privacy" target="_blank" rel="noopener">web3forms.com/privacy</a></p>
+
+      <h3>Änderungen dieser Richtlinie</h3>
+      <p>Wir behalten uns vor, diese Cookie-Richtlinie bei Bedarf anzupassen. Die aktuelle Version ist stets über den Footer dieser Website abrufbar.</p>
+
+    </div>
+    <div class="legal-modal-footer">
+      <button class="legal-modal-close-btn">Schließen</button>
+    </div>
+  </div>
+</div>
+
 
 <script src="script.js"></script>
 </body>

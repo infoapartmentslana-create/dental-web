@@ -72,44 +72,85 @@ function showToast(message, type = 'success') {
   toast._timer = setTimeout(() => toast.classList.remove('show'), 4500);
 }
 
-/* --- Kontakt forma --- */
+/* --- Kontakt forma s validacijom --- */
 const contactForm = document.getElementById('contact-form');
 const submitBtn   = document.getElementById('submit-btn');
+const submitErr   = document.getElementById('submit-err');
+
+function getFieldGroup(input) {
+  if (input.id === 'gdpr') return input.closest('.form-group-gdpr');
+  return input.closest('.form-group');
+}
+
+function validateInput(input) {
+  const group   = getFieldGroup(input);
+  if (!group) return true;
+  const errSpan = group.querySelector('.field-err');
+  let valid     = true;
+
+  if (input.type === 'checkbox') {
+    valid = input.checked;
+  } else if (input.type === 'email') {
+    if (!input.value.trim()) {
+      if (errSpan) errSpan.textContent = 'Dieses Feld ist erforderlich.';
+      valid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim())) {
+      if (errSpan) errSpan.textContent = 'Bitte geben Sie eine gültige E-Mail-Adresse ein.';
+      valid = false;
+    }
+  } else {
+    valid = input.value.trim().length > 0;
+  }
+
+  group.classList.toggle('has-error', !valid);
+  return valid;
+}
+
+function validateAll() {
+  let allValid = true;
+  contactForm.querySelectorAll('input[required], textarea[required]').forEach(input => {
+    if (!validateInput(input)) allValid = false;
+  });
+  return allValid;
+}
 
 if (contactForm) {
+  /* Validacija pri napuštanju polja (blur) */
+  contactForm.querySelectorAll('input[required], textarea[required]').forEach(input => {
+    input.addEventListener('blur', () => validateInput(input));
+    const evt = input.type === 'checkbox' ? 'change' : 'input';
+    input.addEventListener(evt, () => {
+      if (getFieldGroup(input).classList.contains('has-error')) validateInput(input);
+      if (submitErr.classList.contains('show') && validateAll()) submitErr.classList.remove('show');
+    });
+  });
+
   contactForm.addEventListener('submit', async e => {
     e.preventDefault();
 
-    if (!document.getElementById('gdpr').checked) {
-      showToast('Bitte akzeptieren Sie die Datenschutzerklärung.', 'error');
+    if (!validateAll()) {
+      submitErr.classList.add('show');
+      const firstErr = contactForm.querySelector('.has-error');
+      if (firstErr) firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
       return;
     }
-
-    /* Prüfen ob Formspree konfiguriert ist */
-    if (contactForm.action.includes('ZAMIJENI_S_TVOJIM_KODOM')) {
-      /* Fallback: mailto öffnen wenn Formspree nicht eingerichtet ist */
-      const name    = document.getElementById('cf-name').value;
-      const email   = document.getElementById('cf-email').value;
-      const phone   = document.getElementById('cf-phone').value;
-      const message = document.getElementById('cf-message').value;
-      const body    = `Name: ${name}\nE-Mail: ${email}\nTelefon: ${phone}\n\nNachricht:\n${message}`;
-      window.location.href = `mailto:info@zahnaesthetika.at?subject=Anfrage über die Website von ${name}&body=${encodeURIComponent(body)}`;
-      return;
-    }
+    submitErr.classList.remove('show');
 
     submitBtn.disabled = true;
     submitBtn.textContent = 'Wird gesendet…';
 
     try {
-      const res = await fetch(contactForm.action, {
-        method: 'POST',
-        body: new FormData(contactForm),
+      const res  = await fetch('https://api.web3forms.com/submit', {
+        method:  'POST',
+        body:    new FormData(contactForm),
         headers: { Accept: 'application/json' }
       });
+      const data = await res.json();
 
-      if (res.ok) {
+      if (data.success) {
         showToast('Vielen Dank! Wir melden uns so bald wie möglich.');
         contactForm.reset();
+        contactForm.querySelectorAll('.has-error').forEach(el => el.classList.remove('has-error'));
       } else {
         showToast('Fehler beim Senden. Bitte kontaktieren Sie uns telefonisch.', 'error');
       }
@@ -248,4 +289,52 @@ const staggerObs = new IntersectionObserver(entries => {
 }, { threshold: 0.06, rootMargin: '0px 0px -30px 0px' });
 
 document.querySelectorAll('.stagger').forEach(el => staggerObs.observe(el));
+
+/* ============================================================
+   LEGAL MODALS — Impressum, Datenschutz, Cookie
+   ============================================================ */
+function openLegalModal(id) {
+  const modal = document.getElementById('modal-' + id);
+  if (!modal) return;
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  modal.querySelector('.legal-modal-close')?.focus();
+}
+
+function closeLegalModal(modal) {
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function switchLegalModal(newId) {
+  document.querySelectorAll('.legal-modal.open').forEach(m => closeLegalModal(m));
+  const next = document.getElementById(newId);
+  if (next) {
+    next.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+/* Trigger linkovi (footer + cookie banner) */
+document.querySelectorAll('.legal-trigger').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    openLegalModal(link.dataset.legal);
+  });
+});
+
+/* Zatvaranje — X gumb, footer gumb, klik na backdrop, ESC */
+document.querySelectorAll('.legal-modal').forEach(modal => {
+  modal.addEventListener('click', e => {
+    if (e.target === modal) closeLegalModal(modal);
+  });
+  modal.querySelector('.legal-modal-close')?.addEventListener('click', () => closeLegalModal(modal));
+  modal.querySelector('.legal-modal-close-btn')?.addEventListener('click', () => closeLegalModal(modal));
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.legal-modal.open').forEach(m => closeLegalModal(m));
+  }
+});
 
