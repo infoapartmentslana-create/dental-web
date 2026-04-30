@@ -172,7 +172,7 @@ h1, h2, h3, h4 {
   padding: 0.6rem 1.25rem;
   border: none;
   color: hsl(0, 0%, 100%);
-  background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 55%, var(--gold-light) 100%);
+  background: linear-gradient(to right, var(--gold-dark) 0%, var(--gold) 55%, var(--gold-light) 100%);
   background-size: 200% 100%;
   background-position: 100% 0;
   box-shadow: 0 3px 14px -3px hsl(340 30% 50% / 0.32);
@@ -295,7 +295,7 @@ h1, h2, h3, h4 {
   gap: 1rem;
 }
 .btn-primary {
-  background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 55%, var(--gold-light) 100%);
+  background: linear-gradient(to right, var(--gold-dark) 0%, var(--gold) 55%, var(--gold-light) 100%);
   background-size: 200% 100%;
   background-position: 100% 0;
   color: hsl(0, 0%, 100%);
