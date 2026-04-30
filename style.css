@@ -1144,11 +1144,11 @@ footer { background: var(--espresso); color: hsl(0 0% 100% / 0.65); padding-top:
   overflow: hidden;
   background: linear-gradient(
     90deg,
-    hsl(340 40% 52%) 0%,
-    hsl(340 28% 80%) 28%,
-    hsl(0   0% 99%)  52%,
-    hsl(338 26% 82%) 74%,
-    hsl(340 38% 54%) 100%
+    hsl(340 44% 55%) 0%,
+    hsl(340 36% 70%) 28%,
+    hsl(340 30% 78%) 52%,
+    hsl(340 36% 70%) 74%,
+    hsl(340 44% 55%) 100%
   );
   padding: 1.1rem 0;
   border-top: 1px solid hsl(340 32% 58% / 0.3);
@@ -1178,7 +1178,7 @@ footer { background: var(--espresso); color: hsl(0 0% 100% / 0.65); padding-top:
   background: hsl(340 42% 38%);
   flex-shrink: 0;
 }
-.marquee-item em { color: hsl(340 46% 32%); font-style: italic; font-weight: 400; }
+.marquee-item em { color: hsl(0 0% 5%); font-style: italic; font-weight: 400; }
 @keyframes marquee-scroll {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
@@ -1257,23 +1257,23 @@ footer { background: var(--espresso); color: hsl(0 0% 100% / 0.65); padding-top:
 .marquee-strip {
   background: linear-gradient(
     90deg,
-    hsl(340 40% 52%) 0%,
-    hsl(340 28% 80%) 28%,
-    hsl(0   0% 99%)  52%,
-    hsl(338 26% 82%) 74%,
-    hsl(340 38% 54%) 100%
+    hsl(340 44% 55%) 0%,
+    hsl(340 36% 70%) 28%,
+    hsl(340 30% 78%) 52%,
+    hsl(340 36% 70%) 74%,
+    hsl(340 44% 55%) 100%
   );
   border-top: 1px solid hsl(340 32% 58% / 0.3);
   border-bottom: 1px solid hsl(340 32% 58% / 0.3);
   padding: 0.85rem 0;
 }
 .marquee-item {
-  color: hsl(340 12% 8%);
+  color: hsl(0 0% 5%);
   font-size: 0.95rem;
   letter-spacing: 0.04em;
 }
-.marquee-item em { color: hsl(340 46% 32%); }
-.marquee-dot { background: hsl(340 42% 38%); }
+.marquee-item em { color: hsl(0 0% 5%); font-style: italic; }
+.marquee-dot { background: hsl(340 48% 32%); }
 
 /* ============================================================
    USLUGE — novi split layout (foto + 2-col grid)
@@ -1364,11 +1364,11 @@ footer           { background: var(--espresso); }
 .marquee-strip   {
   background: linear-gradient(
     90deg,
-    hsl(340 40% 52%) 0%,
-    hsl(340 28% 80%) 28%,
-    hsl(0   0% 99%)  52%,
-    hsl(338 26% 82%) 74%,
-    hsl(340 38% 54%) 100%
+    hsl(340 44% 55%) 0%,
+    hsl(340 36% 70%) 28%,
+    hsl(340 30% 78%) 52%,
+    hsl(340 36% 70%) 74%,
+    hsl(340 44% 55%) 100%
   );
   border-top: 1px solid hsl(340 32% 58% / 0.3);
   border-bottom: 1px solid hsl(340 32% 58% / 0.3);
@@ -1406,9 +1406,9 @@ footer           { background: var(--espresso); }
 /* ============================================================
    MARQUEE — čitljiviji tekst (fix kontrast)
    ============================================================ */
-.marquee-item      { color: hsl(340 12% 8%); }
-.marquee-item em   { color: hsl(340 46% 32%); }
-.marquee-dot       { background: hsl(340 42% 38%); }
+.marquee-item      { color: hsl(0 0% 5%); }
+.marquee-item em   { color: hsl(0 0% 5%); font-style: italic; }
+.marquee-dot       { background: hsl(340 48% 32%); }
 
 
 /* ============================================================
